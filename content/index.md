@@ -1,7 +1,5 @@
-# Corn Huang
+# Hi there, I am Corn Huang
 
-Hi there. I am a student at GCU, majoring in Network Engineering with interest in modern Front-End developing.
+and I work at CAUPD. I am passionate about modern front-end development.
 
-I joined [EMNOTE](https://emnote.nicecorn.com/) in 2017. EMNOTE is a pioneering company of emergency medicine education and research. I now serve as its senior vice president of technology.
-
-Mail me at [hi@nicecorn.com](mailto:hi@nicecorn.com).
+I am proud to say that I have been with [EMNOTE](https://emnotegb.com/) since 2017, a pioneering company in emergency medicine education and research, where I now serve as Senior Vice President of Technology.

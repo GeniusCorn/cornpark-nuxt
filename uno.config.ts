@@ -12,12 +12,33 @@ import {
 import extractorMdc from '@unocss/extractor-mdc'
 
 export default defineConfig({
+  shortcuts: [{
+    'text-base': 'text-gray-700 dark:text-gray-200',
+  }],
+  theme: {
+    colors: {
+      momo: '#f596AA',
+    },
+  },
   presets: [
-    presetUno(),
+    presetUno({
+      dark: {
+        light: '.light-mode',
+        dark: '.dark-mode',
+      },
+    }),
     presetIcons(),
     presetAttributify(),
     presetTypography(),
-    presetWebFonts(),
+    presetWebFonts({
+      provider: 'google',
+      fonts: {
+        sans: 'Noto Sans',
+        mono: 'Fira Code',
+        roboto: 'Roboto',
+        montserrat: 'Montserrat',
+      },
+    }),
     presetTagify(),
   ],
   transformers: [
