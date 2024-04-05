@@ -1,14 +1,5 @@
 <template>
-  <div flex flex-row gap-4 justify-between>
-    <div text-red>
-      CornPark
-    </div>
-
-    <div flex flex-row gap-4>
-      <div>Blog</div>
-      <div>Projects</div>
-    </div>
-  </div>
+  <CommonNavbar />
 
   <div>
     <NuxtPage />
@@ -17,6 +8,9 @@
 
 <style>
 body {
+  @apply text-base;
+  margin: 0;
+  box-sizing: border-box;
   background-color: #fff;
   color: rgba(0,0,0,0.8);
 }
