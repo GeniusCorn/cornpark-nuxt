@@ -20,7 +20,7 @@ defineProps({
     decoration-gray hover:decoration-momo transition-all ease-in-out duration-150
     text-dark dark:text-white
     :href="href"
-    :target="target"
+    target="_blank"
   >
     <slot />
   </NuxtLink>
