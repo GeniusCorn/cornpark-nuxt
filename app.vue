@@ -4,6 +4,8 @@
   <div>
     <NuxtPage />
   </div>
+
+  <CommonFooter />
 </template>
 
 <style>
