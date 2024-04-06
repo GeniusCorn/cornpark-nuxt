@@ -8,8 +8,19 @@ const query
     path: queryPath,
     skip: 0,
     limit: 10,
+    where: [{
+      _dir: { $ne: 'blog' },
+    }],
+    sort: [{ title: -1 }],
   })
-const count = await queryContent(queryPath.value).count()
+
+const count = ref<number>(0)
+
+async function updateListCount(queryPath: string) {
+  count.value = await queryContent(queryPath).where({ _dir: { $ne: 'blog' } }).count()
+}
+
+onMounted(async () => await updateListCount(queryPath.value))
 
 function previousPage() {
   if (query.skip as number < (query.limit as number))
@@ -21,10 +32,16 @@ function previousPage() {
 function nextPage() {
   query.skip = query.skip as number + (query.limit as number)
 }
+
+async function onUpdateQueryPath(newQueryPath: string) {
+  query.skip = 0
+  await updateListCount(newQueryPath)
+  queryPath.value = newQueryPath
+}
 </script>
 
 <template>
-  <BlogTab :query-path @update="queryPath = $event" />
+  <BlogTab :query-path @update="onUpdateQueryPath($event)" />
 
   <main px-12 pb-12>
     <ContentList v-slot="{ list }" :query="query">
