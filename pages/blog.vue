@@ -7,18 +7,19 @@ const query
   = reactive<QueryBuilderParams>({
     path: queryPath,
     skip: 0,
-    limit: 5,
+    limit: 10,
   })
+const count = await queryContent(queryPath.value).count()
 
 function previousPage() {
-  if (query.skip as number < 5)
+  if (query.skip as number < (query.limit as number))
     return
 
-  query.skip = query.skip as number - 5
+  query.skip = query.skip as number - (query.limit as number)
 }
 
 function nextPage() {
-  query.skip = query.skip as number + 5
+  query.skip = query.skip as number + (query.limit as number)
 }
 </script>
 
@@ -52,11 +53,11 @@ function nextPage() {
         />
 
         <div text-sm>
-          Page {{ (query.skip as number / 5) + 1 }}
+          Page {{ (query.skip as number / (query.limit as number)) + 1 }}
         </div>
 
         <div
-          v-if="list.length >= 5"
+          v-if="count - (query.skip as number) > (query.limit as number)"
           i-tabler-arrow-big-right
           hover:text-momo
           class="pageButton"
