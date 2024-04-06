@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 
+const queryPath = ref('/blog')
+
 const query
   = reactive<QueryBuilderParams>({
-    path: '/blog',
+    path: queryPath,
     skip: 0,
     limit: 5,
   })
@@ -21,6 +23,8 @@ function nextPage() {
 </script>
 
 <template>
+  <BlogTab :query-path @update="queryPath = $event" />
+
   <main px-12 pb-12>
     <ContentList v-slot="{ list }" :query="query">
       <div
