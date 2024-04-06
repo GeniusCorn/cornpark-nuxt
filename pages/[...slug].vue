@@ -4,6 +4,14 @@
 
 <template>
   <main px-12 pb-12>
+    <div
+      m-auto prose font-sans cursor-pointer hover:text-momo
+      flex items-center gap-2
+      @click="$router.go(-1)"
+    >
+      <div i-tabler-arrow-back-up />
+      Back
+    </div>
     <ContentDoc>
       <template #default="{ doc }">
         <article prose m-auto font-sans>
