@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main px-12>
+  <main px-12 pb-12>
     <ContentDoc v-slot="{ doc }">
       <article prose m-auto font-roboto>
         <ContentRenderer :value="doc">
