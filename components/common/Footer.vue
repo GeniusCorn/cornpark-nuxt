@@ -5,7 +5,7 @@ const currentYear = computed(() => new Date().getFullYear())
 <template>
   <div
     flex flex-col items-center justify-center gap-2
-    text-xs opacity-60
+    text-xs opacity-60 pb-4
   >
     <div>
       Copyright &copy; 2021 - {{ currentYear }}
