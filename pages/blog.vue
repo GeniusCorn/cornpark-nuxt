@@ -46,7 +46,7 @@ async function onUpdateQueryPath(newQueryPath: string) {
   <main px-12 pb-12>
     <ContentList v-slot="{ list }" :query="query">
       <div
-        v-for="article in list" :key="article._path"
+        v-for="article in list" :key="article.id"
         m-auto prose font-sans cursor-pointer hover:text-momo transition-all
         @click="$router.push(article._path)"
       >
