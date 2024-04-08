@@ -1,20 +1,18 @@
 <script lang="ts" setup>
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-
-const queryPath = ref('/blog')
+const queryPath = useState('queryPath', () => '/blog')
+const skip = useState('skip', () => 0)
+const count = ref<number>(0)
 
 const query
-  = reactive<QueryBuilderParams>({
+  = reactive({
     path: queryPath,
-    skip: 0,
+    skip,
     limit: 10,
     where: [{
       _dir: { $ne: 'blog' },
     }],
-    sort: [{ title: -1 }],
+    sort: [{ $numeric: 1 }],
   })
-
-const count = ref<number>(0)
 
 async function updateListCount(queryPath: string) {
   count.value = await queryContent(queryPath).where({ _dir: { $ne: 'blog' } }).count()
@@ -23,18 +21,18 @@ async function updateListCount(queryPath: string) {
 onMounted(async () => await updateListCount(queryPath.value))
 
 function previousPage() {
-  if (query.skip as number < (query.limit as number))
+  if (skip.value < query.limit)
     return
 
-  query.skip = query.skip as number - (query.limit as number)
+  skip.value = skip.value - query.limit
 }
 
 function nextPage() {
-  query.skip = query.skip as number + (query.limit as number)
+  skip.value = skip.value + query.limit
 }
 
 async function onUpdateQueryPath(newQueryPath: string) {
-  query.skip = 0
+  skip.value = 0
   await updateListCount(newQueryPath)
   queryPath.value = newQueryPath
 }
@@ -57,7 +55,7 @@ async function onUpdateQueryPath(newQueryPath: string) {
 
       <div flex justify-center items-center gap-4>
         <div
-          v-if="query.skip as number > 0"
+          v-if="skip > 0"
           i-tabler-arrow-big-left
           hover:text-momo
           class="pageButton"
@@ -70,11 +68,11 @@ async function onUpdateQueryPath(newQueryPath: string) {
         />
 
         <div text-sm>
-          Page {{ (query.skip as number / (query.limit as number)) + 1 }}
+          Page {{ (skip / query.limit) + 1 }}
         </div>
 
         <div
-          v-if="count - (query.skip as number) > (query.limit as number)"
+          v-if="count - skip > query.limit"
           i-tabler-arrow-big-right
           hover:text-momo
           class="pageButton"
