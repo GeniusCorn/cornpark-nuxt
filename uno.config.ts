@@ -37,6 +37,7 @@ export default defineConfig({
         mono: 'Fira Code',
         roboto: 'Roboto',
         montserrat: 'Montserrat',
+        bebas: 'Bebas Neue',
       },
     }),
     presetTagify(),
