@@ -50,7 +50,6 @@ async function onUpdateQueryPath(newQueryPath: string) {
       >
         <h1>{{ article.title }}</h1>
         <p>{{ article.description }}</p>
-        <p>link: {{ article._path }}</p>
       </div>
 
       <div flex justify-center items-center gap-4>

@@ -8,6 +8,25 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
   content: {
+    highlight: {
+      theme: {
+        default: 'vitesse-light',
+        dark: 'vitesse-black',
+      },
+      langs: [
+        'json',
+        'js',
+        'ts',
+        'html',
+        'css',
+        'vue',
+        'shell',
+        'mdc',
+        'md',
+        'yaml',
+        'dockerfile',
+      ],
+    },
     experimental: {
       search: {},
     },
