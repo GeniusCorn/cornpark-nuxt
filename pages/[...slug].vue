@@ -7,7 +7,7 @@
     <div
       m-auto prose font-sans cursor-pointer hover:text-momo
       flex items-center gap-2
-      @click="$router.go(-1)"
+      @click="$router.push('/blog')"
     >
       <div i-tabler-arrow-back-up />
       Back
