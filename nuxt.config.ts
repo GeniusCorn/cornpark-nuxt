@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
   ],
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+  },
   content: {
     highlight: {
       theme: {

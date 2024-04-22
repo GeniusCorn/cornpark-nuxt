@@ -1,24 +1,17 @@
 <script lang="ts" setup>
-const colorMode = useColorMode()
 
-function toggleColorMode() {
-  colorMode.value === 'light'
-    ? colorMode.preference = 'dark'
-    : colorMode.preference = 'light'
-}
 </script>
 
 <template>
-  <nav flex flex-row gap-4 justify-between p-10 items-center>
+  <nav flex flex-row items-center justify-between gap-4 p-10>
     <NuxtLink to="/">
-      <div font-montserrat text-3xl>
+      <div text-3xl font-montserrat>
         CornPark
       </div>
     </NuxtLink>
 
     <div
-      md:flex flex-row gap-4 items-center opacity-60
-      hidden
+      hidden flex-row items-center gap-4 opacity-60 md:flex
     >
       <NuxtLink to="/blog">
         <div>
@@ -29,7 +22,7 @@ function toggleColorMode() {
         <div>Projects</div>
       </NuxtLink>
 
-      <div flex flex-row gap-4 items-center class="socialMedia">
+      <div flex flex-row items-center gap-4 class="socialMedia">
         <NuxtLink to="https://github.com/GeniusCorn" target="_blank">
           <div i-tabler-brand-github />
         </NuxtLink>
@@ -47,11 +40,12 @@ function toggleColorMode() {
         <!-- <NuxtLink to="">
           <div i-tabler-device-nintendo />
         </NuxtLink> -->
-        <div i-tabler-sun dark:i-tabler-moon @click="toggleColorMode" />
+
+        <CommonToggleDarkModeButton />
       </div>
     </div>
     <div
-      flex flex-row gap-4 items-center opacity-60 md:hidden
+      flex flex-row items-center gap-4 opacity-60 md:hidden
       class="socialMedia"
     >
       <NuxtLink to="/blog">

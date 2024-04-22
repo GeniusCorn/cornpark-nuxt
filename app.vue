@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import '~/styles/override.css'
+</script>
+
 <template>
   <CommonNavbar />
 
@@ -9,19 +13,15 @@
 </template>
 
 <style>
-body {
-  @apply text-base;
-  margin: 0;
+* {
   box-sizing: border-box;
-  background-color: #fff;
-  color: rgba(0,0,0,0.8);
+  position: relative;
+  min-width: 0;
 }
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-.sepia-mode body {
-  background-color: #f1e7d0;
-  color: #433422;
+
+html, body {
+  @apply text-base bg-base;
+  min-height: 100dvh;
+  margin: 0;
 }
 </style>

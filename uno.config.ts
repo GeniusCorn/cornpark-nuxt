@@ -13,6 +13,7 @@ import extractorMdc from '@unocss/extractor-mdc'
 
 export default defineConfig({
   shortcuts: [{
+    'bg-base': 'bg-white dark:bg-black',
     'text-base': 'text-gray-700 dark:text-gray-200',
   }],
   theme: {
