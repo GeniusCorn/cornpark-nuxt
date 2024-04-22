@@ -12,41 +12,41 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div flex gap-4 items-center justify-center mb-4>
+  <div mb-4 flex items-center justify-center gap-4>
     <NuxtLink :to="props.link" target="_blank">
       <div
-        text-3xl flex-none hover:text-momo transition-all
+        flex-none text-3xl transition-all hover:text-momo
         :class="props.icon"
       />
     </NuxtLink>
 
     <div w-full>
-      <div flex gap-2 items-center>
+      <div flex items-center gap-2>
         <div text-2xl font-bebas>
           {{ props.title }}
         </div>
 
         <div
           v-if="props.archived"
-          text-xs bg-amber px-2 rounded-full font-bold text-white dark:text-black
+          rounded-full bg-amber px-2 text-xs text-white font-bold dark:text-black
         >
           ARCHIVED
         </div>
 
         <div
           v-if="props.outOfService"
-          text-xs bg-rose px-2 rounded-full font-bold text-white dark:text-black
+          rounded-full bg-rose px-2 text-xs text-white font-bold dark:text-black
         >
           OUT OF SERVICE
         </div>
       </div>
 
-      <div text-base font-roboto>
+      <div font-roboto text-base>
         {{ props.description }}
       </div>
     </div>
 
-    <div text-2xl flex gap-2 items-center>
+    <div flex items-center gap-2 text-2xl>
       <NuxtLink :to="props.githubLink" target="_blank">
         <div i-tabler-brand-github />
       </NuxtLink>

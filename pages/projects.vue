@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main prose m-auto px-12>
+  <main m-auto px-12 prose>
     <CommonProject
       icon="i-tabler-file-type-vue"
       title="Vue 3 Starter"

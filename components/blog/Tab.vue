@@ -15,7 +15,7 @@ function changePath(path: string) {
 </script>
 
 <template>
-  <div flex flex-row gap-4 justify-center>
+  <div flex flex-row justify-center gap-4>
     <div
       :class="{ activeTab: queryPath === '/blog' }"
       class="tab"

@@ -4,7 +4,7 @@ const skip = useState('skip', () => 0)
 const count = ref<number>(0)
 
 const query
-  = reactive({
+  = reactive<any>({
     path: queryPath,
     skip,
     limit: 10,
@@ -45,14 +45,14 @@ async function onUpdateQueryPath(newQueryPath: string) {
     <ContentList v-slot="{ list }" :query="query">
       <div
         v-for="article in list" :key="article.id"
-        m-auto prose font-sans cursor-pointer hover:text-momo transition-all
-        @click="$router.push(article._path)"
+        m-auto cursor-pointer font-sans transition-all prose hover:text-momo
+        @click="$router.push(article._path as string)"
       >
         <h1>{{ article.title }}</h1>
         <p>{{ article.description }}</p>
       </div>
 
-      <div flex justify-center items-center gap-4>
+      <div flex items-center justify-center gap-4>
         <div
           v-if="skip > 0"
           i-tabler-arrow-big-left

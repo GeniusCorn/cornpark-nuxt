@@ -5,7 +5,7 @@
 <template>
   <main px-12 pb-12>
     <ContentDoc v-slot="{ doc }">
-      <article prose m-auto font-roboto>
+      <article m-auto font-roboto prose>
         <ContentRenderer :value="doc">
           <ContentRendererMarkdown :value="doc" />
         </ContentRenderer>
@@ -15,7 +15,7 @@
     <div flex justify-center>
       <img
         width="300"
-        rounded-full m-auto
+        rounded-full
         src="https://avatars.githubusercontent.com/u/12198452"
       >
     </div>

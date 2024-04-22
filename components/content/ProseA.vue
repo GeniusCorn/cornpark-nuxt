@@ -17,8 +17,8 @@ defineProps({
 
 <template>
   <NuxtLink
-    decoration-gray hover:decoration-momo transition-all ease-in-out duration-150
-    text-dark dark:text-white
+    text-dark decoration-gray transition-all duration-150 ease-in-out
+    dark:text-white hover:decoration-momo
     :href="href"
     target="_blank"
   >
