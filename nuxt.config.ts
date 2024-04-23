@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
+    '@nuxtjs/seo',
   ],
   nitro: {
     prerender: {
@@ -15,6 +16,16 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     fallback: 'light',
+  },
+  site: {
+    url: 'https://nicecorn.com',
+    name: 'CornPark',
+    description: 'Welcome to CornPark.',
+  },
+  i18n: {
+    baseUrl: 'https://nicecorn.com',
+    locales: ['zh-cn', 'en'],
+    defaultLocale: 'zh-cn',
   },
   content: {
     highlight: {
