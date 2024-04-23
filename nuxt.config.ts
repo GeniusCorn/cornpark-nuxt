@@ -34,6 +34,7 @@ export default defineNuxtConfig({
         'md',
         'yaml',
         'dockerfile',
+        'toml',
       ],
     },
     experimental: {
