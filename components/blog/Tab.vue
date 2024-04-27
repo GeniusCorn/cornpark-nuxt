@@ -9,8 +9,18 @@ const emit = defineEmits<{
 const contentQuery
   = await queryContent('blog').where({ _dir: { $eq: 'blog' } }).find()
 
-function changePath(path: string) {
+function changePath(path: string, title?: string) {
   emit('update', path)
+
+  if (path === '/blog') {
+    useHead({
+      title: 'ALL',
+    })
+  }
+
+  useHead({
+    title,
+  })
 }
 </script>
 
@@ -30,7 +40,7 @@ function changePath(path: string) {
       <div
         :class="{ activeTab: queryPath === tab._path }"
         class="tab"
-        @click="changePath(tab._path as string)"
+        @click="changePath(tab._path as string, tab.title as string)"
       >
         {{ tab.title }}
       </div>

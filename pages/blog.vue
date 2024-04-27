@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+useHead({
+  title: 'ALL',
+})
+
 const queryPath = useState('queryPath', () => '/blog')
 const skip = useState('skip', () => 0)
 const count = ref<number>(0)
