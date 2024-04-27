@@ -3,16 +3,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@unocss/nuxt',
-    '@nuxtjs/i18n',
+    // '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
     '@nuxtjs/seo',
   ],
-  nitro: {
-    prerender: {
-      autoSubfolderIndex: false,
-    },
-  },
-  devtools: { enabled: true },
   colorMode: {
     preference: 'system',
     fallback: 'light',
@@ -22,10 +16,8 @@ export default defineNuxtConfig({
     name: 'CornPark',
     description: 'Welcome to CornPark.',
   },
-  i18n: {
-    baseUrl: 'https://nicecorn.com',
-    locales: ['zh-cn', 'en'],
-    defaultLocale: 'zh-cn',
+  sitemap: {
+    strictNuxtContentPaths: true,
   },
   content: {
     highlight: {
@@ -48,7 +40,6 @@ export default defineNuxtConfig({
         'toml',
       ],
     },
-    experimental: {
-    },
   },
+  devtools: { enabled: true },
 })

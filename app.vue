@@ -3,13 +3,9 @@ import '~/styles/override.css'
 </script>
 
 <template>
-  <CommonNavbar />
-
-  <div>
+  <NuxtLayout>
     <NuxtPage />
-  </div>
-
-  <CommonFooter />
+  </NuxtLayout>
 </template>
 
 <style>
