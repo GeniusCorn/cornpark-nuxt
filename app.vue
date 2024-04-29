@@ -3,6 +3,7 @@ import '~/styles/override.css'
 </script>
 
 <template>
+  <NuxtLoadingIndicator :height="4" />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
