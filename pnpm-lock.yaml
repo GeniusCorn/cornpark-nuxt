@@ -42,6 +42,9 @@ importers:
       '@unocss/nuxt':
         specifier: 0.59.4
         version: 0.59.4(postcss@8.4.38)(rollup@4.16.4)(vite@5.2.10(@types/node@20.12.7)(sass@1.75.0)(terser@5.30.4))(webpack@5.91.0)
+      dayjs-nuxt:
+        specifier: ^2.1.9
+        version: 2.1.9(rollup@4.16.4)
       eslint:
         specifier: 9.1.1
         version: 9.1.1
@@ -2391,6 +2394,12 @@ packages:
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
+
+  dayjs-nuxt@2.1.9:
+    resolution: {integrity: sha512-7L1X8Wm+O2s2o+YK8RH1GK0SUUsh7l0lnIzsjaLGvyu64asLs2KVNoh25J4tQurdILp2TyrFaTo/k3k/ZPub9Q==}
+
+  dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
 
   db0@0.1.4:
     resolution: {integrity: sha512-Ft6eCwONYxlwLjBXSJxw0t0RYtA5gW9mq8JfBXn9TtC0nDPlqePAhpv9v4g9aONBi6JI1OXHTKKkUYGd+BOrCA==}
@@ -8972,6 +8981,16 @@ snapshots:
       css-tree: 2.2.1
 
   csstype@3.1.3: {}
+
+  dayjs-nuxt@2.1.9(rollup@4.16.4):
+    dependencies:
+      '@nuxt/kit': 3.11.2(rollup@4.16.4)
+      dayjs: 1.11.11
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+
+  dayjs@1.11.11: {}
 
   db0@0.1.4: {}
 

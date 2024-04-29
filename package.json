@@ -25,6 +25,7 @@
     "@unocss/eslint-plugin": "0.59.4",
     "@unocss/extractor-mdc": "0.59.4",
     "@unocss/nuxt": "0.59.4",
+    "dayjs-nuxt": "^2.1.9",
     "eslint": "9.1.1",
     "nuxt": "^3.11.2"
   }

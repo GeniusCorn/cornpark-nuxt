@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     // '@nuxtjs/i18n',
     '@nuxtjs/color-mode',
     '@nuxtjs/seo',
+    'dayjs-nuxt',
   ],
   colorMode: {
     preference: 'system',
@@ -40,6 +41,9 @@ export default defineNuxtConfig({
         'toml',
       ],
     },
+  },
+  dayjs: {
+    plugins: ['localizedFormat'],
   },
   devtools: { enabled: true },
 })

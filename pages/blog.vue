@@ -19,10 +19,14 @@ const query
   })
 
 async function updateListCount(queryPath: string) {
-  count.value = await queryContent(queryPath).where({ _dir: { $ne: 'blog' } }).count()
+  count.value
+    = await queryContent(queryPath)
+      .where({ _dir: { $ne: 'blog' } })
+      .count()
 }
 
-onMounted(async () => await updateListCount(queryPath.value))
+onMounted(async () =>
+  await updateListCount(queryPath.value))
 
 function previousPage() {
   if (skip.value < query.limit)
@@ -49,10 +53,19 @@ async function onUpdateQueryPath(newQueryPath: string) {
     <ContentList v-slot="{ list }" :query="query">
       <div
         v-for="article in list" :key="article.id"
-        m-auto cursor-pointer font-sans transition-all prose hover:text-momo
+        m-auto cursor-pointer font-sans transition-all prose
+        hover:text-momo
         @click="$router.push(article._path as string)"
       >
-        <h1>{{ article.title }}</h1>
+        <div flex flex-row items-center justify-between>
+          <h1>{{ article.title }}</h1>
+          <div
+            v-if="article.time"
+            text-xs op-60
+          >
+            {{ $dayjs(article.time).format('L') }}
+          </div>
+        </div>
         <p>{{ article.description }}</p>
       </div>
 
