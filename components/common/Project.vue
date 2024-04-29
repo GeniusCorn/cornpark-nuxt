@@ -22,9 +22,14 @@ const props = defineProps<{
 
     <div w-full>
       <div flex items-center gap-2>
-        <div text-2xl font-bebas>
-          {{ props.title }}
-        </div>
+        <NuxtLink
+          no-underline
+          :to="props.link" target="_blank"
+        >
+          <div text-2xl font-bebas>
+            {{ props.title }}
+          </div>
+        </NuxtLink>
 
         <div
           v-if="props.archived"
