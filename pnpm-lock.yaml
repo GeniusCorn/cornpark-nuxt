@@ -35,8 +35,8 @@ devDependencies:
     specifier: 0.60.3
     version: 0.60.3(eslint@9.4.0)(typescript@5.4.5)
   '@unocss/extractor-mdc':
-    specifier: 0.60.3
-    version: 0.60.3
+    specifier: 0.60.4
+    version: 0.60.4
   '@unocss/nuxt':
     specifier: 0.60.4
     version: 0.60.4(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11)(webpack@5.91.0)
@@ -3574,8 +3574,8 @@ packages:
     dependencies:
       '@unocss/core': 0.60.4
 
-  /@unocss/extractor-mdc@0.60.3:
-    resolution: {integrity: sha512-3WcaffgortFQdjcxnas3mxAgE8yu9ZrIAWRqR/Ox/ZTKvteAnoBnkcXoshU5rmh98BMC9cp9e8WbaAWiYSQfYg==}
+  /@unocss/extractor-mdc@0.60.4:
+    resolution: {integrity: sha512-3phY9A7LeRdyLpBVdRIjWrb+RYc54kp7M/bzkOfo3rgLcgtIv3ZzI/npEpgvCwXekAbA/pjwJLzID88eHvuJug==}
     dev: true
 
   /@unocss/inspector@0.59.4:
