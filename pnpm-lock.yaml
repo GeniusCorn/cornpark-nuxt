@@ -19,8 +19,8 @@ importers:
         specifier: ^1.1.15
         version: 1.1.15
       '@iconify-json/tabler':
-        specifier: ^1.1.115
-        version: 1.1.115
+        specifier: ^1.1.116
+        version: 1.1.116
       '@nuxtjs/color-mode':
         specifier: ^3.4.2
         version: 3.4.2(magicast@0.3.4)(rollup@4.17.2)
@@ -857,8 +857,8 @@ packages:
   '@iconify-json/ri@1.1.21':
     resolution: {integrity: sha512-ssU2CRaB4T83Q3cncCZtITholhYkH6gEL5XLmdMII6Xzn8bTCpDCkt+HdX4URc24uUMD0PGIaNLJUIAgdfLMjQ==}
 
-  '@iconify-json/tabler@1.1.115':
-    resolution: {integrity: sha512-nyD8OmtQhBl6FLptfVJe04fjoLIUT3sxe4sEChrXhVDuYQlb1DUPEQQkbwjAIzP4w9JcNYwdUpVbIWn60AjECw==}
+  '@iconify-json/tabler@1.1.116':
+    resolution: {integrity: sha512-p+dJ+3L/M2o10REG2lh179Blu5+AA51TFkwuUwY7F+vQsF5Z8DIjyNck3yoBBiCxWqhDhsLzC+p9YO7dWqISmw==}
 
   '@iconify/collections@1.0.420':
     resolution: {integrity: sha512-CU2pV2VXtCxWoXo+2dDyLziWhX3ryqVr2yKn0I8lTIRcQXOUlhXNEotZf6w70bnQ7eqwdTO3C9QLQrU6OzaF/g==}
@@ -3132,9 +3132,6 @@ packages:
 
   error-stack-parser-es@0.1.1:
     resolution: {integrity: sha512-g/9rfnvnagiNf+DRMHEVGuGuIBlCIMDFoTA616HaP2l9PlCjGjVhD98PNbVSJvmK4TttqT5mV5tInMhoFgi+aA==}
-
-  es-module-lexer@1.5.2:
-    resolution: {integrity: sha512-l60ETUTmLqbVbVHv1J4/qj+M8nq7AwMzEcg3kmJDt9dCNrTk+yHcYFf/Kw75pMDwd9mPcIGCG5LcS20SxYRzFA==}
 
   es-module-lexer@1.5.4:
     resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
@@ -7224,7 +7221,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/tabler@1.1.115':
+  '@iconify-json/tabler@1.1.116':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -7606,7 +7603,7 @@ snapshots:
       '@iconify-json/carbon': 1.1.32
       '@iconify-json/logos': 1.1.42
       '@iconify-json/ri': 1.1.20
-      '@iconify-json/tabler': 1.1.115
+      '@iconify-json/tabler': 1.1.116
       '@nuxt/devtools-kit': 1.2.0(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.9)(@unocss/reset@0.61.0)(encoding@0.1.13)(eslint@9.6.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.17.2))(vue@3.4.29(typescript@5.4.5)))(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.17.2)(sass@1.76.0)(terser@5.31.0)(typescript@5.4.5)(unocss@0.61.0(@unocss/webpack@0.61.0(rollup@4.17.2)(webpack@5.91.0))(postcss@8.4.38)(rollup@4.17.2)(vite@5.3.1(@types/node@20.12.9)(sass@1.76.0)(terser@5.31.0)))(vite@5.3.1(@types/node@20.12.9)(sass@1.76.0)(terser@5.31.0)))(rollup@4.17.2)(vite@5.3.1(@types/node@20.12.9)(sass@1.76.0)(terser@5.31.0))
       '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@4.17.2)
       '@nuxtjs/color-mode': 3.4.2(magicast@0.3.4)(rollup@4.17.2)
@@ -7653,7 +7650,7 @@ snapshots:
       '@iconify-json/carbon': 1.1.36
       '@iconify-json/logos': 1.1.43
       '@iconify-json/ri': 1.1.21
-      '@iconify-json/tabler': 1.1.115
+      '@iconify-json/tabler': 1.1.116
       '@nuxt/devtools-kit': 1.3.6(magicast@0.3.4)(rollup@4.17.2)(vite@5.3.1(@types/node@20.12.9)(sass@1.76.0)(terser@5.31.0))
       '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@4.17.2)
       '@unocss/core': 0.61.0
@@ -10399,8 +10396,6 @@ snapshots:
       is-arrayish: 0.2.1
 
   error-stack-parser-es@0.1.1: {}
-
-  es-module-lexer@1.5.2: {}
 
   es-module-lexer@1.5.4: {}
 
@@ -14719,7 +14714,7 @@ snapshots:
       browserslist: 4.23.0
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.17.0
-      es-module-lexer: 1.5.2
+      es-module-lexer: 1.5.4
       eslint-scope: 5.1.1
       events: 3.3.0
       glob-to-regexp: 0.4.1
