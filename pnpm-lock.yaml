@@ -19,8 +19,8 @@ importers:
         specifier: ^1.1.16
         version: 1.1.16
       '@iconify-json/tabler':
-        specifier: ^1.1.119
-        version: 1.1.119
+        specifier: ^1.1.120
+        version: 1.1.120
       '@nuxtjs/color-mode':
         specifier: ^3.4.2
         version: 3.4.2(magicast@0.3.4)(rollup@4.18.1)
@@ -869,8 +869,8 @@ packages:
   '@iconify-json/ep@1.1.16':
     resolution: {integrity: sha512-g7XnumVhTGlMDFkr7D3U19HJxneGdRwG8MIeV/PIubfRQu1wOh9aYQSycbTYMV9LCVr0Hg2wN1U45R8MJvPjlA==}
 
-  '@iconify-json/tabler@1.1.119':
-    resolution: {integrity: sha512-UdbEO3WGcEg022GKTT2mR1mN8oUjSGrBccWbhH8sSqVAAzDmMR+6yERloiQtVN0/yHRwqQY9RIdtrzmDFR6n0g==}
+  '@iconify-json/tabler@1.1.120':
+    resolution: {integrity: sha512-G9of3jPsYUfFkdaeqfILQF3xkCuZeitqJDjMkqmzjfJcWzl7JW/PoPJRby28dIUHTyO6eLqOlKhFP4/EQCg44Q==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -6669,7 +6669,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/tabler@1.1.119':
+  '@iconify-json/tabler@1.1.120':
     dependencies:
       '@iconify/types': 2.0.0
 
