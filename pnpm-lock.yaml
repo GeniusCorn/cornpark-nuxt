@@ -28,8 +28,8 @@ importers:
         specifier: ^8.3.1
         version: 8.3.1(magicast@0.3.4)(rollup@4.18.1)(vue@3.4.37(typescript@5.4.5))
       '@nuxtjs/seo':
-        specifier: 2.0.0-rc.16
-        version: 2.0.0-rc.16(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
+        specifier: 2.0.0-rc.18
+        version: 2.0.0-rc.18(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
       '@nuxtjs/tailwindcss':
         specifier: ^6.12.1
         version: 6.12.1(magicast@0.3.4)(rollup@4.18.1)
@@ -1010,11 +1010,11 @@ packages:
   '@nuxtjs/robots@4.0.2':
     resolution: {integrity: sha512-7hpAbSXjrzZNZ2vvzJf5E9H8+yVxJlPNY5wP/MSOWlw3pEJzTJQilAFsJj+jofocGj9y3iNDeqv/a5v/Lz8ppg==}
 
-  '@nuxtjs/seo@2.0.0-rc.16':
-    resolution: {integrity: sha512-EK+GKTBrEpwJsKtXWsNzPlrXDW1Dcx1ELLKKevBaWJkPlXw6ykpXE8pOWB8HKajmv/9NWkoD3sF6pOR/mZXcaw==}
+  '@nuxtjs/seo@2.0.0-rc.18':
+    resolution: {integrity: sha512-oJwhys1ukzxdQZOragIPFcsfbbR9Gf+5a993lFhR3jYbB6Izs4Bro4sZMeP11wuiv50U74/5dAantjmxep1xfA==}
 
-  '@nuxtjs/sitemap@5.3.5':
-    resolution: {integrity: sha512-TfhEImgVHEZaI/vphZdoCaWM2TRBJqprHZPhIQwWYJz+dpQWkfY6z8UpjhmUh6npvbj5kNY9ncLenkw0cDJp9g==}
+  '@nuxtjs/sitemap@6.0.0-beta.1':
+    resolution: {integrity: sha512-qLpMWAGr4vyTt2F1WYiA4Cv5ubxvjvd7LNW8Zt917O50Jcs3qSNiGPjFuDYDf9mTNGbkxtDyRti0/uESa5WP2A==}
     engines: {node: '>=18.0.0'}
 
   '@nuxtjs/tailwindcss@6.12.1':
@@ -1598,18 +1598,12 @@ packages:
     resolution: {integrity: sha512-ATvZEFMQiW3/oUaaplVMBYuagEELtnLbHSYH4pUGbJ5MALAfV98mZRyk4FkKkYoMYqWLGdCylzpgMPFDOuFQlQ==}
     engines: {node: '>=14'}
 
-  '@unocss/core@0.61.8':
-    resolution: {integrity: sha512-WFCJVGrhyNyF5i2SBTO3vR9HE+hMi7aP+e3VpAkveiqoCh3QBm2AeoEGUGpBPTLTZpb7AhcqOkRPiPeYk3+z+A==}
-
   '@unocss/core@0.61.9':
     resolution: {integrity: sha512-2W1YZQIWXcueGdbXU/ZCqn/8yQhWk8e8kAHFkVlbc9rictkd2UmPB9nIZ8Ii1tMwt6F0TT6vfHbLJEGCV08o2g==}
 
   '@unocss/eslint-plugin@0.61.9':
     resolution: {integrity: sha512-jgOym3WyWXAWyjkrtIZurkl87XuWAwhN8mul8V4mokpFMB5y6VMlatCYql/dD0tIyZuFJujxfWvUkizqyE84aQ==}
     engines: {node: '>=14'}
-
-  '@unocss/extractor-arbitrary-variants@0.61.8':
-    resolution: {integrity: sha512-4vFExQhUBNWtrZS7jOYJrX9VzNLE6ynUFK+W1E5NJpozQqHbzFvbNYT5KC6+IMzmWPQQswd2ktMuDQwL+C1Qpg==}
 
   '@unocss/extractor-arbitrary-variants@0.61.9':
     resolution: {integrity: sha512-ii42/hKbhgeBBOy86729t6/HeGmxUcHM8FprPeb/v/DfYsCkjDvMYVynX3FN/K5pR2WV+HHp6TQS7GbTmRIN0g==}
@@ -1635,9 +1629,6 @@ packages:
   '@unocss/preset-icons@0.61.9':
     resolution: {integrity: sha512-5XZO511ksu3EVwpV2nIZKa5NzyJAb+JARKaUpQIXssHUVdRKk5nJYr1XtrpBDLgB6VEf/1skViLEa1bpOUI5Wg==}
 
-  '@unocss/preset-mini@0.61.8':
-    resolution: {integrity: sha512-woLvWUn9hgR8+UOk9KGA7bjIFq2WrGgw5KyYnA0uZ27yFtwkvaAq3FZ7voKF5mdNnhepnDL8mw8IgnaQnDRiAg==}
-
   '@unocss/preset-mini@0.61.9':
     resolution: {integrity: sha512-qhagWfdM7ytRWf4wFfrAcdeCUCVD9wDVrM+9evAmuOnMXWEiVZCjfwhjjFu+8lM7g+38n+gi7VcrNuTiZ8fHBA==}
 
@@ -1653,18 +1644,11 @@ packages:
   '@unocss/preset-web-fonts@0.61.9':
     resolution: {integrity: sha512-fjQv74+FiAvGJM5vSLkD15Taku0cbi5F7qAr5T85EIQOpUB1fiH2kPoXIOT1WS2lKbQZh6pNGBxLrbBRgnVPew==}
 
-  '@unocss/preset-wind@0.61.8':
-    resolution: {integrity: sha512-rYUBzRKAPN1+x57u4NFH+wTp26hI/8barFoI440d24Z5IhGq5Amtjmi5WJpZ5wDTbOdresgpp+Fbbaan+7MhSw==}
-
   '@unocss/preset-wind@0.61.9':
     resolution: {integrity: sha512-AzbjJrNL9Rb2BzTiREyssd8v7KFVVLERQ/PNILGzo6yYelYMl4AhKXZ3jgxWEsIABArVa3UkGBigG4h/L+2JHA==}
 
   '@unocss/reset@0.61.9':
     resolution: {integrity: sha512-A1KtJiFgLM0N3FqJ9r5M3mVULcwsn+14tq5WkvSPF9ik3zQeJh8/NhxKdJImWClwBOzn795NQFXXFB70Ja+2RA==}
-
-  '@unocss/rule-utils@0.61.8':
-    resolution: {integrity: sha512-Sz4JTTOoXX32Dq+T3U761RIHsf+VCnrw/mKSqbn6XUruxivFBr80YC22dKxawzRjBHGdUAIGDRv38ZKgui+4KA==}
-    engines: {node: '>=14'}
 
   '@unocss/rule-utils@0.61.9':
     resolution: {integrity: sha512-54Hw0nF+3ga70ETo3kes4He62wdsB4dHMgEiD/DEmJzyVY3ZuG/sIVAgkxjMQDo5w4SSYU/Ys1QaY+IQmeJHFQ==}
@@ -6974,11 +6958,11 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/seo@2.0.0-rc.16(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))':
+  '@nuxtjs/seo@2.0.0-rc.18(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))':
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.18.1)
       '@nuxtjs/robots': 4.0.2(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
-      '@nuxtjs/sitemap': 5.3.5(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
+      '@nuxtjs/sitemap': 6.0.0-beta.1(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
       defu: 6.1.4
       nuxt-link-checker: 3.1.0(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
       nuxt-og-image: 3.0.0-rc.64(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))
@@ -6997,7 +6981,7 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/sitemap@5.3.5(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))':
+  '@nuxtjs/sitemap@6.0.0-beta.1(h3@1.12.0)(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(vue@3.4.37(typescript@5.4.5))':
     dependencies:
       '@nuxt/devtools-kit': 1.3.9(magicast@0.3.4)(rollup@4.18.1)(vite@5.4.0(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.18.1)
@@ -7619,8 +7603,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@unocss/core@0.61.8': {}
-
   '@unocss/core@0.61.9': {}
 
   '@unocss/eslint-plugin@0.61.9(eslint@9.7.0)(typescript@5.4.5)':
@@ -7634,10 +7616,6 @@ snapshots:
       - eslint
       - supports-color
       - typescript
-
-  '@unocss/extractor-arbitrary-variants@0.61.8':
-    dependencies:
-      '@unocss/core': 0.61.8
 
   '@unocss/extractor-arbitrary-variants@0.61.9':
     dependencies:
@@ -7700,12 +7678,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@unocss/preset-mini@0.61.8':
-    dependencies:
-      '@unocss/core': 0.61.8
-      '@unocss/extractor-arbitrary-variants': 0.61.8
-      '@unocss/rule-utils': 0.61.8
-
   '@unocss/preset-mini@0.61.9':
     dependencies:
       '@unocss/core': 0.61.9
@@ -7733,12 +7705,6 @@ snapshots:
       '@unocss/core': 0.61.9
       ofetch: 1.3.4
 
-  '@unocss/preset-wind@0.61.8':
-    dependencies:
-      '@unocss/core': 0.61.8
-      '@unocss/preset-mini': 0.61.8
-      '@unocss/rule-utils': 0.61.8
-
   '@unocss/preset-wind@0.61.9':
     dependencies:
       '@unocss/core': 0.61.9
@@ -7746,11 +7712,6 @@ snapshots:
       '@unocss/rule-utils': 0.61.9
 
   '@unocss/reset@0.61.9': {}
-
-  '@unocss/rule-utils@0.61.8':
-    dependencies:
-      '@unocss/core': 0.61.9
-      magic-string: 0.30.11
 
   '@unocss/rule-utils@0.61.9':
     dependencies:
@@ -10822,7 +10783,7 @@ snapshots:
       '@resvg/resvg-js': 2.6.2
       '@resvg/resvg-wasm': 2.6.2
       '@unocss/core': 0.61.9
-      '@unocss/preset-wind': 0.61.8
+      '@unocss/preset-wind': 0.61.9
       chrome-launcher: 1.1.2
       defu: 6.1.4
       execa: 9.3.0
