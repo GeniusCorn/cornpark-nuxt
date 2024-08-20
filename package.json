@@ -18,7 +18,7 @@
     "@antfu/eslint-config": "^2.26.0",
     "@iconify-json/ep": "^1.1.16",
     "@iconify-json/tabler": "^1.1.120",
-    "@nuxtjs/color-mode": "^3.4.2",
+    "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/seo": "2.0.0-rc.18",
     "@nuxtjs/tailwindcss": "^6.12.1",
