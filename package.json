@@ -20,7 +20,7 @@
     "@iconify-json/tabler": "^1.1.120",
     "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/i18n": "^8.5.0",
-    "@nuxtjs/seo": "2.0.0-rc.18",
+    "@nuxtjs/seo": "2.0.0-rc.19",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@unocss/eslint-plugin": "0.62.2",
     "@unocss/extractor-mdc": "0.61.9",
