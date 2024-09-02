@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.2",
-    "@iconify-json/ep": "^1.1.16",
+    "@iconify-json/ep": "^1.2.0",
     "@iconify-json/tabler": "^1.1.120",
     "@nuxtjs/color-mode": "^3.4.4",
     "@nuxtjs/i18n": "^8.5.1",
