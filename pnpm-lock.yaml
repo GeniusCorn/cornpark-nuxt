@@ -37,8 +37,8 @@ importers:
         specifier: 0.63.4
         version: 0.63.4(eslint@9.13.0(jiti@2.0.0))(typescript@5.4.5)
       '@unocss/extractor-mdc':
-        specifier: 0.62.3
-        version: 0.62.3
+        specifier: 0.63.4
+        version: 0.63.4
       '@unocss/nuxt':
         specifier: 0.62.2
         version: 0.62.2(magicast@0.3.4)(postcss@8.4.41)(rollup@4.18.1)(vite@5.4.2(@types/node@20.12.9)(sass@1.77.8)(terser@5.31.0))(webpack@5.91.0(esbuild@0.23.1))
@@ -1754,8 +1754,8 @@ packages:
   '@unocss/extractor-arbitrary-variants@0.62.2':
     resolution: {integrity: sha512-k0+QifbKe3Wp6dznQIhn1bQ/shR8yMk1ypfWQFOAr0ylXXlKMXFxfpRyxH3awbTDRBpi/SxIIaBTAzflGxBSgg==}
 
-  '@unocss/extractor-mdc@0.62.3':
-    resolution: {integrity: sha512-1fmgTQHCbM9STo917uhvu98QXXtkTNBo6+7q3M+j0LIbU5A9UoPHzuvuPS17Mdshmf0AR5Hv7FyCrqi49Txkdw==}
+  '@unocss/extractor-mdc@0.63.4':
+    resolution: {integrity: sha512-k9F02eEC3YOz77MNQdITE33wzAe9Ef+4ILX2GsttFg3g44rgWmKxhzJmSgCz7NJlbuFqRDrI8jhd1WPOxaSdPw==}
 
   '@unocss/inspector@0.62.2':
     resolution: {integrity: sha512-P2J8xx4MeB8VHCwjick+PzMyLPKvUNZBuUxuFVhh3xpMsbGlvSIKMH4PRCriwWih+7wqHlrI+fv1gAjoiGHe3Q==}
@@ -7892,7 +7892,7 @@ snapshots:
     dependencies:
       '@unocss/core': 0.62.2
 
-  '@unocss/extractor-mdc@0.62.3': {}
+  '@unocss/extractor-mdc@0.63.4': {}
 
   '@unocss/inspector@0.62.2':
     dependencies:
