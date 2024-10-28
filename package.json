@@ -23,7 +23,7 @@
     "@nuxtjs/seo": "2.0.0-rc.23",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@unocss/eslint-plugin": "0.63.4",
-    "@unocss/extractor-mdc": "0.63.4",
+    "@unocss/extractor-mdc": "0.63.6",
     "@unocss/nuxt": "0.63.6",
     "dayjs-nuxt": "^2.1.11",
     "eslint": "9.13.0",
