@@ -4,12 +4,12 @@
 
 <template>
   <header>
-    <div class="flex flex-row gap-4 items-center justify-between px-4 py-2">
+    <div class="flex flex-row items-center justify-between gap-4 px-4 py-2">
       <NuxtLink font-logo to="/">
         CornPark
       </NuxtLink>
 
-      <div class="flex flex-row gap-4 items-center">
+      <div class="flex flex-row items-center gap-4">
         <NuxtLink to="/">
           <div i-ri-home-2-line />
         </NuxtLink>
@@ -38,8 +38,8 @@
           <div i-ri-bluesky-line />
         </NuxtLink>
 
-        <NuxtLink>
-          <div i-ri-moon-line />
+        <NuxtLink @click="toggleColorMode">
+          <ToggleDarkModeButton />
         </NuxtLink>
       </div>
     </div>
@@ -48,6 +48,6 @@
 
 <style scoped>
 a {
-  @apply text-2xl text-black hover:text-momo transition-all no-underline;
+  @apply text-2xl text-base hover:text-momo transition-all no-underline;
 }
 </style>
