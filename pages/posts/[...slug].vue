@@ -12,6 +12,16 @@ const { data: page } = await useAsyncData(path.value as string, () => {
 </script>
 
 <template>
+  <NuxtLink
+    flex flex-row cursor-pointer items-center gap-2 no-underline transition-all hover:text-momo
+    @click="$router.go(-1)"
+  >
+    <div i-ri-arrow-left-fill />
+    <div>
+      Back
+    </div>
+  </NuxtLink>
+
   <ContentRenderer
     v-if="page"
     :value="page"
