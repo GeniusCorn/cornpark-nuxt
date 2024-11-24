@@ -1,0 +1,18 @@
+<script lang="ts" setup>
+const currentYear = computed(() => new Date().getFullYear())
+</script>
+
+<template>
+  <footer class="flex flex-col items-center gap-2 text-xs text-slate">
+    <NuxtLink
+      to="https://beian.miit.gov.cn/"
+      target="_blank"
+      external text-slate no-underline transition-all hover:text-momo
+    >
+      粤 ICP 备 20026972 号
+    </NuxtLink>
+    <div>
+      {{ currentYear }} &copy; GeniusCorn
+    </div>
+  </footer>
+</template>

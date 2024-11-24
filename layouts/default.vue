@@ -5,9 +5,9 @@
 <template>
   <Header />
 
-  <slot />
+  <div class="m-auto prose">
+    <slot />
+  </div>
 
-  <footer>
-    footer
-  </footer>
+  <Footer />
 </template>
