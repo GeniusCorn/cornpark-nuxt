@@ -12,7 +12,12 @@ import {
 export default defineConfig({
   presets: [
     presetAttributify(),
-    presetUno(),
+    presetUno({
+      dark: {
+        light: '.light-mode',
+        dark: '.dark-mode',
+      },
+    }),
     presetIcons(),
     presetTypography(),
     presetWebFonts({
@@ -26,6 +31,10 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
   ],
+  shortcuts: [{
+    'bg-base': 'bg-white dark:bg-black',
+    'text-base': 'text-gray-700 dark:text-gray-200',
+  }],
   theme: {
     colors: {
       momo: '#f596aa',
