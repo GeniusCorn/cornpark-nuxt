@@ -21,7 +21,7 @@ export default defineConfig({
     presetIcons(),
     presetTypography(),
     presetWebFonts({
-      provider: 'bunny',
+      provider: 'google',
       fonts: {
         logo: 'ABeeZee',
       },

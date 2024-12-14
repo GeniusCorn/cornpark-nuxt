@@ -3,7 +3,7 @@ const currentYear = computed(() => new Date().getFullYear())
 </script>
 
 <template>
-  <footer class="flex flex-col items-center gap-2 text-xs text-slate">
+  <footer class="my-10 flex flex-col items-center gap-2 text-xs text-slate">
     <NuxtLink
       to="https://beian.miit.gov.cn/"
       target="_blank"
