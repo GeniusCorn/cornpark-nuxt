@@ -4,6 +4,7 @@ import '~/style/reset.css'
 </script>
 
 <template>
+  <NuxtLoadingIndicator color="#f596aa" />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
