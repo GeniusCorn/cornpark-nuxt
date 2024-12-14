@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
   compatibilityDate: '2024-04-03',
+  routeRules: {
+    '/': { prerender: true },
+  },
   content: {
     build: {
       markdown: {
