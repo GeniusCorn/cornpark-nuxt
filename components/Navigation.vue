@@ -3,12 +3,12 @@ import type {
   ContentNavigationItem,
   PageCollections,
 } from '@nuxt/content'
-import { useStorage } from '@vueuse/core'
+import { useRouteQuery } from '@vueuse/router'
 
-const dir = useStorage('dir', 'huisi')
+const category = useRouteQuery<keyof PageCollections>('category')
 
 const { data: posts, execute } = await useAsyncData('navigation', () => {
-  return queryCollectionNavigation(dir.value as keyof PageCollections, ['date'])
+  return queryCollectionNavigation(category.value, ['date'])
     .order('date', 'DESC')
 })
 
@@ -17,8 +17,8 @@ const nav = computed(
     flattenAndExtractFiles(posts.value || []),
 )
 
-async function changeDir(newDir: string) {
-  dir.value = newDir as keyof PageCollections
+async function changeDir(newDir: keyof PageCollections) {
+  category.value = newDir
 
   await execute()
 }
@@ -44,51 +44,43 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
 </script>
 
 <template>
-  <ClientOnly>
-    <div class="flex flex-row justify-center gap-4">
-      <div
-        class="menu"
-        :class="{ 'text-momo': dir === 'huisi' }"
-        @click="changeDir('huisi')"
-      >
-        慧思
-      </div>
-      <div
-        class="menu"
-        :class="{ 'text-momo': dir === 'jingdu' }"
-        @click="changeDir('jingdu')"
-      >
-        精读
-      </div>
-      <div
-        class="menu"
-        :class="{ 'text-momo': dir === 'puti' }"
-        @click="changeDir('puti')"
-      >
-        菩提
-      </div>
-      <div
-        class="menu"
-        :class="{ 'text-momo': dir === 'wudao' }"
-        @click="changeDir('wudao')"
-      >
-        悟道
-      </div>
-      <div
-        class="menu"
-        :class="{ 'text-momo': dir === 'xiuxing' }"
-        @click="changeDir('xiuxing')"
-      >
-        修行
-      </div>
+  <div class="flex flex-row justify-center gap-4">
+    <div
+      class="menu"
+      :class="{ 'text-momo': category === 'huisi' }"
+      @click="changeDir('huisi')"
+    >
+      慧思
     </div>
-
-    <template #fallback>
-      <div flex items-center justify-center text-xl opacity-20>
-        Loading navigation...
-      </div>
-    </template>
-  </ClientOnly>
+    <div
+      class="menu"
+      :class="{ 'text-momo': category === 'jingdu' }"
+      @click="changeDir('jingdu')"
+    >
+      精读
+    </div>
+    <div
+      class="menu"
+      :class="{ 'text-momo': category === 'puti' }"
+      @click="changeDir('puti')"
+    >
+      菩提
+    </div>
+    <div
+      class="menu"
+      :class="{ 'text-momo': category === 'wudao' }"
+      @click="changeDir('wudao')"
+    >
+      悟道
+    </div>
+    <div
+      class="menu"
+      :class="{ 'text-momo': category === 'xiuxing' }"
+      @click="changeDir('xiuxing')"
+    >
+      修行
+    </div>
+  </div>
 
   <div mt-20 flex flex-col gap-4 text-lg>
     <div
