@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import process from 'node:process'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
@@ -11,6 +12,10 @@ export default defineNuxtConfig({
     '/': { prerender: true },
   },
   content: {
+    database: {
+      type: 'd1',
+      binding: process.env.NUXT_DB_ID as string,
+    },
     build: {
       markdown: {
         highlight: {
