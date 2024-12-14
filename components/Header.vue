@@ -14,7 +14,7 @@
           <div i-ri-home-2-line />
         </NuxtLink> -->
 
-        <NuxtLink to="/posts">
+        <NuxtLink to="/posts?category=huisi">
           <div i-ri-article-line />
         </NuxtLink>
 
