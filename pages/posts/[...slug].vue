@@ -3,11 +3,13 @@ import type { PageCollections } from '@nuxt/content'
 
 const route = useRoute()
 
-const dir = computed(() => route.path.split('/').at(-2))
-const path = computed(() => route.path.split('/').at(-1))
+const dir = computed(() => route.path.split('/').at(2))
+const path = computed(() => route.path.split(dir.value as string).splice(1).join(''))
 
 const { data: page } = await useAsyncData(path.value as string, () => {
-  return queryCollection(dir.value as keyof PageCollections).path(`/${path.value as string}`).first()
+  return queryCollection(dir.value as keyof PageCollections)
+    .path(`/${dir.value}${path.value}`)
+    .first()
 })
 </script>
 
@@ -24,6 +26,7 @@ const { data: page } = await useAsyncData(path.value as string, () => {
 
   <ContentRenderer
     v-if="page"
+    mt-20
     :value="page"
   />
 </template>
