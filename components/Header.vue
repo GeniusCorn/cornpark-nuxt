@@ -4,23 +4,23 @@
 
 <template>
   <header>
-    <div class="flex flex-row items-center justify-between gap-4 px-4 py-2">
+    <div class="flex flex-row items-center justify-between gap-4 p-6">
       <NuxtLink font-logo to="/">
         CornPark
       </NuxtLink>
 
       <div class="flex flex-row items-center gap-4">
-        <NuxtLink to="/">
+        <!-- <NuxtLink to="/">
           <div i-ri-home-2-line />
-        </NuxtLink>
+        </NuxtLink> -->
 
         <NuxtLink to="/posts">
           <div i-ri-article-line />
         </NuxtLink>
 
-        <NuxtLink to="/projects">
+        <!-- <NuxtLink to="/projects">
           <div i-ri-apps-line />
-        </NuxtLink>
+        </NuxtLink> -->
 
         <NuxtLink
           to="https://github.com/GeniusCorn"
@@ -38,7 +38,7 @@
           <div i-ri-bluesky-line />
         </NuxtLink>
 
-        <NuxtLink @click="toggleColorMode">
+        <NuxtLink>
           <ToggleDarkModeButton />
         </NuxtLink>
       </div>
