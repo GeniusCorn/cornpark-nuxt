@@ -7,15 +7,21 @@ import { useRouteQuery } from '@vueuse/router'
 
 const category = useRouteQuery<keyof PageCollections>('category')
 
-const { data: posts, execute } = await useAsyncData('navigation', () => {
+const {
+  data: posts,
+  execute,
+  status,
+} = await useAsyncData('navigation', () => {
   return queryCollectionNavigation(category.value, ['date'])
     .order('date', 'DESC')
 })
 
-const nav = computed(
+const nav = computed<ContentNavigationItem[]>(
   () =>
     flattenAndExtractFiles(posts.value || []),
 )
+
+const randomCount = useState('randomCount', () => (Math.floor(Math.random() * 6) + 5))
 
 async function changeDir(newDir: keyof PageCollections) {
   category.value = newDir
@@ -82,17 +88,52 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
     </div>
   </div>
 
-  <div mt-20 flex flex-col gap-4 text-lg>
+  <div mt-20 text-lg>
     <div
-      v-for="post in nav"
-      :key="post.path"
+      v-if="status === 'success'"
+      flex flex-col gap-4
     >
-      <NuxtLink
-        :to="`/posts${post.path}`"
-        no-underline transition-all hover:text-momo
+      <div
+        v-for="post in nav"
+        :key="post.path"
       >
-        {{ post.title }}
-      </NuxtLink>
+        <NuxtLink
+          :to="`/posts${post.path}`"
+          flex flex-row items-center justify-between no-underline transition-all hover:text-momo
+        >
+          <div>
+            {{ post.title }}
+          </div>
+          <div
+            v-if="post.date"
+            text-xs opacity-60
+          >
+            {{
+              $dayjs(post.date as string).format('MMMM D, YYYY')
+            }}
+          </div>
+        </NuxtLink>
+      </div>
+    </div>
+
+    <div
+      v-if="status === 'pending'"
+      flex flex-col animate-pulse gap-4
+    >
+      <div
+        v-for="i in randomCount"
+        :key="i"
+        h-6 w-full rounded bg-slate-200
+      />
+    </div>
+
+    <div
+      v-if="status === 'error'"
+      flex items-center justify-center
+    >
+      <div>
+        No content.
+      </div>
     </div>
   </div>
 </template>

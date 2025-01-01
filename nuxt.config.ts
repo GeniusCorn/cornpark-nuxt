@@ -6,17 +6,22 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
+    'dayjs-nuxt',
   ],
+
   compatibilityDate: '2024-04-03',
+
   routeRules: {
     '/': { prerender: true },
   },
+
   content: {
     database: {
       type: 'd1',
       binding: process.env.NUXT_DB_ID as string,
     },
     build: {
+      pathMeta: {},
       markdown: {
         highlight: {
           theme: {
@@ -29,5 +34,17 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  dayjs: {
+    locales: ['en'],
+    plugins: [
+      'timezone',
+      'relativeTime',
+      'utc',
+      'localizedFormat',
+    ],
+    defaultLocale: 'en',
+  },
+
   devtools: { enabled: true },
 })
