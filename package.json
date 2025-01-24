@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,22 +13,22 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "3.0.0-alpha.8",
+    "@nuxt/content": "3.0.0",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@vueuse/router": "^12.2.0",
+    "@vueuse/router": "^12.5.0",
     "dayjs-nuxt": "2.1.11",
-    "nuxt": "^3.15.0",
+    "nuxt": "^3.15.2",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.12.1",
-    "@iconify/json": "^2.2.290",
+    "@antfu/eslint-config": "^3.16.0",
+    "@iconify/json": "^2.2.299",
     "@unocss/eslint-plugin": "0.65.2",
     "@unocss/nuxt": "0.65.2",
-    "@vueuse/core": "^12.2.0",
-    "@vueuse/nuxt": "^12.2.0",
-    "eslint": "^9.17.0",
+    "@vueuse/core": "^12.5.0",
+    "@vueuse/nuxt": "^12.5.0",
+    "eslint": "^9.18.0",
     "unocss": "0.65.2"
   }
 }
