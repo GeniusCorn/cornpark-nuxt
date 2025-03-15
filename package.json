@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.6.1",
+  "packageManager": "pnpm@10.6.3",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -15,24 +15,26 @@
   "dependencies": {
     "@nuxt/content": "3.0.0",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@vueuse/router": "^12.8.2",
+    "@vueuse/router": "^13.0.0",
     "dayjs-nuxt": "2.1.11",
     "nuxt": "^3.16.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.8.1",
-    "@iconify/json": "^2.2.314",
+    "@antfu/eslint-config": "^4.10.1",
+    "@iconify/json": "^2.2.317",
     "@unocss/eslint-plugin": "0.65.2",
     "@unocss/nuxt": "0.65.2",
-    "@vueuse/core": "^12.8.2",
-    "@vueuse/nuxt": "^12.8.2",
+    "@vueuse/core": "^13.0.0",
+    "@vueuse/nuxt": "^13.0.0",
     "eslint": "^9.22.0",
     "unocss": "0.65.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "better-sqlite3",
       "esbuild"
     ]
   }
