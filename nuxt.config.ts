@@ -46,5 +46,11 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 })
