@@ -18,7 +18,8 @@ export default defineNuxtConfig({
   content: {
     database: {
       type: 'd1',
-      binding: process.env.NUXT_DB_ID as string,
+      bindingName: 'cornpark',
+      binding: process.env.NUXT_DB_ID,
     },
     build: {
       pathMeta: {},
