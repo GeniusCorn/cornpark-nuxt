@@ -13,27 +13,27 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^3.6.3",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@vueuse/router": "^13.5.0",
-    "better-sqlite3": "^12.2.0",
-    "dayjs-nuxt": "2.1.11",
-    "nuxt": "^4.0.0",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "@nuxt/content": "catalog:frontend",
+    "@nuxtjs/color-mode": "catalog:frontend",
+    "better-sqlite3": "catalog:frontend",
+    "dayjs-nuxt": "catalog:frontend",
+    "nuxt": "catalog:frontend",
+    "vue": "catalog:frontend",
+    "vue-router": "catalog:frontend"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.17.0",
-    "@iconify/json": "^2.2.359",
-    "@unocss/eslint-plugin": "0.65.2",
-    "@unocss/nuxt": "0.65.2",
-    "@vueuse/core": "^13.5.0",
-    "@vueuse/nuxt": "^13.5.0",
-    "eslint": "^9.31.0",
-    "eslint-plugin-format": "^1.0.1",
-    "lint-staged": "^16.1.2",
-    "simple-git-hooks": "^2.13.0",
-    "unocss": "0.65.2"
+    "@antfu/eslint-config": "catalog:dev",
+    "@iconify/json": "catalog:dev",
+    "@unocss/eslint-plugin": "catalog:dev",
+    "@unocss/nuxt": "catalog:dev",
+    "@vueuse/core": "catalog:dev",
+    "@vueuse/nuxt": "catalog:dev",
+    "@vueuse/router": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "lint-staged": "catalog:dev",
+    "simple-git-hooks": "catalog:dev",
+    "unocss": "catalog:build"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

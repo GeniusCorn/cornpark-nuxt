@@ -1,5 +1,3 @@
-import process from 'node:process'
-
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
 
@@ -16,11 +14,6 @@ export default defineNuxtConfig({
         },
       },
       pathMeta: {},
-    },
-    database: {
-      binding: process.env.NUXT_DB_ID,
-      bindingName: 'cornpark',
-      type: 'd1',
     },
   },
 

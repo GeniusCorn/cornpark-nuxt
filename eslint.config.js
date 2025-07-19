@@ -6,6 +6,7 @@ export default antfu({
     markdown: 'prettier',
   },
   ignores: ['**/*.md'],
+  pnpm: true,
   rules: {
     'perfectionist/sort-array-includes': 'error',
     'perfectionist/sort-classes': 'error',
