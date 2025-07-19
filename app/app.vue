@@ -8,6 +8,8 @@ import '~/style/reset.css'
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+
+  <ScrollToTop />
 </template>
 
 <style>

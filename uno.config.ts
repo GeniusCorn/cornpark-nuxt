@@ -4,15 +4,15 @@ import {
   presetIcons,
   presetTagify,
   presetTypography,
-  presetUno,
-  presetWebFonts,
+  // presetWebFonts,
+  presetWind4,
   transformerDirectives,
 } from 'unocss'
 
 export default defineConfig({
   presets: [
     presetAttributify(),
-    presetUno({
+    presetWind4({
       dark: {
         dark: '.dark-mode',
         light: '.light-mode',
@@ -20,12 +20,12 @@ export default defineConfig({
     }),
     presetIcons(),
     presetTypography(),
-    presetWebFonts({
-      fonts: {
-        logo: 'ABeeZee',
-      },
-      provider: 'google',
-    }),
+    // presetWebFonts({
+    //   fonts: {
+    //     logo: 'ABeeZee',
+    //   },
+    //   provider: 'google',
+    // }),
     presetTagify(),
   ],
   shortcuts: [{
