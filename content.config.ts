@@ -2,45 +2,45 @@ import { defineCollection, z } from '@nuxt/content'
 
 export const collections = {
   content: defineCollection({
-    type: 'page',
-    source: '**',
     schema: z.object({
       date: z.date(),
     }),
+    source: '**',
+    type: 'page',
   }),
   huisi: defineCollection({
-    type: 'page',
-    source: 'huisi/**',
     schema: z.object({
       date: z.date(),
     }),
+    source: 'huisi/**',
+    type: 'page',
   }),
   jingdu: defineCollection({
-    type: 'page',
-    source: 'jingdu/**',
     schema: z.object({
       date: z.date(),
     }),
+    source: 'jingdu/**',
+    type: 'page',
   }),
   puti: defineCollection({
-    type: 'page',
-    source: 'puti/**',
     schema: z.object({
       date: z.date(),
     }),
+    source: 'puti/**',
+    type: 'page',
   }),
   wudao: defineCollection({
-    type: 'page',
-    source: 'wudao/**',
     schema: z.object({
       date: z.date(),
     }),
+    source: 'wudao/**',
+    type: 'page',
   }),
   xiuxing: defineCollection({
-    type: 'page',
-    source: 'xiuxing/**',
     schema: z.object({
       date: z.date(),
     }),
+    source: 'xiuxing/**',
+    type: 'page',
   }),
 }
