@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "cornpark-nuxt",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.13.1",
@@ -31,14 +31,14 @@
     "@vueuse/nuxt": "^13.5.0",
     "eslint": "^9.31.0",
     "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^16.1.2",
+    "simple-git-hooks": "^2.13.0",
     "unocss": "0.65.2"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "better-sqlite3",
-      "esbuild",
-      "unrs-resolver"
-    ]
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
