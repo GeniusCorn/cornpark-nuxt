@@ -14,22 +14,19 @@ export default defineConfig({
     presetAttributify(),
     presetUno({
       dark: {
-        light: '.light-mode',
         dark: '.dark-mode',
+        light: '.light-mode',
       },
     }),
     presetIcons(),
     presetTypography(),
     presetWebFonts({
-      provider: 'google',
       fonts: {
         logo: 'ABeeZee',
       },
+      provider: 'google',
     }),
     presetTagify(),
-  ],
-  transformers: [
-    transformerDirectives(),
   ],
   shortcuts: [{
     'bg-base': 'bg-white dark:bg-black',
@@ -40,4 +37,7 @@ export default defineConfig({
       momo: '#f596aa',
     },
   },
+  transformers: [
+    transformerDirectives(),
+  ],
 })

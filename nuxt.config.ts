@@ -1,42 +1,31 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-    '@unocss/nuxt',
-    '@nuxtjs/color-mode',
-    '@vueuse/nuxt',
-    'dayjs-nuxt',
-  ],
-
   compatibilityDate: '2024-04-03',
 
-  routeRules: {
-    '/': { prerender: true },
-  },
-
   content: {
-    database: {
-      type: 'd1',
-      bindingName: 'cornpark',
-      binding: process.env.NUXT_DB_ID,
-    },
     build: {
-      pathMeta: {},
       markdown: {
         highlight: {
           theme: {
-            // Default theme (same as single string)
-            default: 'catppuccin-latte',
             // Theme used if `html.dark`
             dark: 'catppuccin-mocha',
+            // Default theme (same as single string)
+            default: 'catppuccin-latte',
           },
         },
       },
+      pathMeta: {},
+    },
+    database: {
+      binding: process.env.NUXT_DB_ID,
+      bindingName: 'cornpark',
+      type: 'd1',
     },
   },
 
   dayjs: {
+    defaultLocale: 'en',
     locales: ['en'],
     plugins: [
       'timezone',
@@ -44,7 +33,6 @@ export default defineNuxtConfig({
       'utc',
       'localizedFormat',
     ],
-    defaultLocale: 'en',
   },
 
   devtools: {
@@ -53,5 +41,17 @@ export default defineNuxtConfig({
     timeline: {
       enabled: true,
     },
+  },
+
+  modules: [
+    '@nuxt/content',
+    '@unocss/nuxt',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    'dayjs-nuxt',
+  ],
+
+  routeRules: {
+    '/': { prerender: true },
   },
 })

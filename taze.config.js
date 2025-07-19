@@ -1,18 +1,18 @@
 import { defineConfig } from 'taze'
 
 export default defineConfig({
+  depFields: {
+    overrides: false,
+  },
   exclude: [],
   force: true,
-  write: true,
-  install: true,
+  ignoreOtherWorkspaces: true,
   ignorePaths: [
     '**/node_modules/**',
     '**/test/**',
   ],
-  ignoreOtherWorkspaces: true,
+  install: true,
   packageMode: {
   },
-  depFields: {
-    overrides: false,
-  },
+  write: true,
 })
