@@ -15,7 +15,7 @@ const { data: page } = await useAsyncData(path.value as string, () => {
 
 <template>
   <NuxtLink
-    flex flex-row cursor-pointer items-center gap-2 no-underline transition-all hover:text-momo
+    no-underline flex flex-row gap-2 cursor-pointer transition-all items-center hover:text-momo
     @click="$router.go(-1)"
   >
     <div i-ri-arrow-left-fill />

@@ -4,12 +4,14 @@
 
 <template>
   <header>
-    <div class="flex flex-row items-center justify-between gap-4 p-6">
+    <div
+      p-6 flex flex-row gap-4 items-center justify-between
+    >
       <NuxtLink font-logo to="/">
         CornPark
       </NuxtLink>
 
-      <div class="flex flex-row items-center gap-4">
+      <div class="flex flex-row gap-4 items-center">
         <!-- <NuxtLink to="/">
           <div i-ri-home-2-line />
         </NuxtLink> -->

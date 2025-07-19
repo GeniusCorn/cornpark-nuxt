@@ -50,7 +50,7 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
 </script>
 
 <template>
-  <div class="flex flex-row justify-center gap-4">
+  <div class="flex flex-row gap-4 justify-center">
     <div
       class="menu"
       :class="{ 'text-momo': category === 'huisi' }"
@@ -88,7 +88,7 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
     </div>
   </div>
 
-  <div mt-20 text-lg>
+  <div text-lg mt-20>
     <div
       v-if="status === 'success'"
       flex flex-col gap-4
@@ -99,7 +99,7 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
       >
         <NuxtLink
           :to="`/posts${post.path}`"
-          flex flex-row items-center justify-between no-underline transition-all hover:text-momo
+          no-underline flex flex-row transition-all items-center justify-between hover:text-momo
         >
           <div>
             {{ post.title }}
@@ -118,12 +118,12 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
 
     <div
       v-if="status === 'pending'"
-      flex flex-col animate-pulse gap-4
+      flex flex-col gap-4 animate-pulse
     >
       <div
         v-for="i in randomCount"
         :key="i"
-        h-6 w-full rounded bg-slate-200
+        rounded bg-slate-200 h-6 w-full
       />
     </div>
 
