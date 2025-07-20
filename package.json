@@ -10,7 +10,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "vitest"
   },
   "dependencies": {
     "@nuxt/content": "catalog:frontend",
@@ -24,16 +25,21 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@iconify/json": "catalog:dev",
+    "@nuxt/test-utils": "catalog:dev",
     "@unocss/eslint-plugin": "catalog:dev",
     "@unocss/nuxt": "catalog:dev",
+    "@vue/test-utils": "catalog:dev",
     "@vueuse/core": "catalog:dev",
     "@vueuse/nuxt": "catalog:dev",
     "@vueuse/router": "catalog:dev",
     "eslint": "catalog:dev",
     "eslint-plugin-format": "catalog:dev",
+    "happy-dom": "catalog:dev",
     "lint-staged": "catalog:dev",
+    "playwright-core": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
-    "unocss": "catalog:build"
+    "unocss": "catalog:build",
+    "vitest": "catalog:dev"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
