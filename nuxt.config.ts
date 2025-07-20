@@ -47,4 +47,12 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
   },
+
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        types: ['vitest/globals'],
+      },
+    },
+  },
 })
