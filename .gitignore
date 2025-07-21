@@ -27,3 +27,5 @@ skills-lock.json
 .env
 .env.*
 !.env.example
+
+coverage

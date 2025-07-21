@@ -5,12 +5,13 @@
   "packageManager": "pnpm@10.13.1",
   "scripts": {
     "build": "nuxt build",
+    "coverage": "vitest --coverage",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview",
     "test": "vitest"
   },
   "dependencies": {
@@ -28,6 +29,8 @@
     "@nuxt/test-utils": "catalog:dev",
     "@unocss/eslint-plugin": "catalog:dev",
     "@unocss/nuxt": "catalog:dev",
+    "@vitest/coverage-v8": "catalog:dev",
+    "@vitest/ui": "catalog:dev",
     "@vue/test-utils": "catalog:dev",
     "@vueuse/core": "catalog:dev",
     "@vueuse/nuxt": "catalog:dev",
