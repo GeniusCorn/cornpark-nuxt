@@ -25,7 +25,7 @@ mockNuxtImport('useWindowScroll', () => {
 })
 
 describe('scroll to top button', () => {
-  it('should be rendered', async () => {
+  it('should render', async () => {
     const component = await mountSuspended(ScrollToTop)
 
     expect(component.html()).toBeDefined()
