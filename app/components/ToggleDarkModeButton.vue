@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const isDark = useDark()
 
-const isAppearanceTransition = document?.startViewTransition
-  && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
 function toggleDark(event?: MouseEvent) {
+  // @ts-expect-error experimental API
+  const isAppearanceTransition = document.startViewTransition
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
   if (!isAppearanceTransition || !event) {
     isDark.value = !isDark.value
     return
@@ -15,7 +16,6 @@ function toggleDark(event?: MouseEvent) {
     Math.max(x, innerWidth - x),
     Math.max(y, innerHeight - y),
   )
-  // @ts-expect-error: Transition API
   const transition = document.startViewTransition(async () => {
     isDark.value = !isDark.value
     await nextTick()
@@ -46,7 +46,9 @@ function toggleDark(event?: MouseEvent) {
 <template>
   <ClientOnly>
     <div
-      i-ri-sun-line dark:i-ri-moon-line text-2xl no-underline cursor-pointer transition-all ease-in hover:text-momo hover:opacity-90
+      i-ri-sun-line dark:i-ri-moon-line text-2xl
+      no-underline cursor-pointer transition-all
+      ease-in hover:text-momo hover:opacity-90
       @click="toggleDark"
     />
 
@@ -55,6 +57,3 @@ function toggleDark(event?: MouseEvent) {
     </template>
   </ClientOnly>
 </template>
-
-<style scoped>
-</style>
