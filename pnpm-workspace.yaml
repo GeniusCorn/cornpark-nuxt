@@ -5,18 +5,18 @@ catalogs:
     unocss: ^66.3.3
 
   dev:
-    '@antfu/eslint-config': ^4.17.0
-    '@iconify/json': ^2.2.360
+    '@antfu/eslint-config': ^5.0.0
+    '@iconify/json': ^2.2.364
     '@nuxt/test-utils': ^3.19.2
     '@unocss/eslint-plugin': 0.65.2
     '@unocss/nuxt': ^66.3.3
     '@vitest/coverage-v8': ^3.2.4
     '@vitest/ui': ^3.2.4
     '@vue/test-utils': ^2.4.6
-    '@vueuse/core': ^13.5.0
-    '@vueuse/nuxt': ^13.5.0
-    '@vueuse/router': ^13.5.0
-    eslint: ^9.31.0
+    '@vueuse/core': ^13.6.0
+    '@vueuse/nuxt': ^13.6.0
+    '@vueuse/router': ^13.6.0
+    eslint: ^9.32.0
     eslint-plugin-format: ^1.0.1
     happy-dom: ^18.0.1
     lint-staged: ^16.1.2
@@ -29,8 +29,8 @@ catalogs:
     '@nuxtjs/color-mode': ^3.5.2
     better-sqlite3: ^12.2.0
     dayjs-nuxt: ^2.1.11
-    nuxt: ^4.0.1
-    vue: ^3.5.17
+    nuxt: ^4.0.2
+    vue: ^3.5.18
     vue-router: ^4.5.1
 
 onlyBuiltDependencies:
