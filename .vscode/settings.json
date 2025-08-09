@@ -48,8 +48,15 @@
     "postcss"
   ],
   "cSpell.words": [
+    "antfu",
     "CAUPD",
     "EMNOTE",
-    "vitest"
+    "esbuild",
+    "iconify",
+    "nuxt",
+    "nuxtjs",
+    "unocss",
+    "vitest",
+    "vueuse"
   ]
 }

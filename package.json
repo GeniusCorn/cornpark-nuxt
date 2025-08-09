@@ -2,7 +2,7 @@
   "name": "cornpark-nuxt",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "build": "nuxt build",
     "coverage": "vitest --coverage",
@@ -12,11 +12,13 @@
     "lint:fix": "eslint . --fix",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "test": "vitest"
+    "test": "vitest",
+    "migrate": "pnpm dlx @better-auth/cli migrate --config ./server/utils/auth.ts"
   },
   "dependencies": {
     "@nuxt/content": "catalog:frontend",
     "@nuxtjs/color-mode": "catalog:frontend",
+    "better-auth": "catalog:shared",
     "better-sqlite3": "catalog:frontend",
     "dayjs-nuxt": "catalog:frontend",
     "nuxt": "catalog:frontend",
@@ -27,6 +29,7 @@
     "@antfu/eslint-config": "catalog:dev",
     "@iconify/json": "catalog:dev",
     "@nuxt/test-utils": "catalog:dev",
+    "@types/better-sqlite3": "catalog:types",
     "@unocss/eslint-plugin": "catalog:dev",
     "@unocss/nuxt": "catalog:dev",
     "@vitest/coverage-v8": "catalog:dev",
