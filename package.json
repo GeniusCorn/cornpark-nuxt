@@ -2,7 +2,7 @@
   "name": "cornpark-nuxt",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.18.2",
   "scripts": {
     "build": "nuxt build",
     "coverage": "vitest --coverage",
@@ -13,14 +13,17 @@
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
     "test": "vitest",
-    "migrate": "pnpm dlx @better-auth/cli migrate --config ./server/utils/auth.ts"
+    "auth:generate": "pnpm dlx @better-auth/cli generate --config ./shared/auth.ts --output ./server/db/schema.ts",
+    "auth:push": "pnpm exec drizzle-kit push --config ./server/db/drizzle.config.ts"
   },
   "dependencies": {
+    "@libsql/client": "catalog:server",
     "@nuxt/content": "catalog:frontend",
     "@nuxtjs/color-mode": "catalog:frontend",
     "better-auth": "catalog:shared",
-    "better-sqlite3": "catalog:frontend",
+    "better-sqlite3": "catalog:server",
     "dayjs-nuxt": "catalog:frontend",
+    "drizzle-orm": "catalog:server",
     "nuxt": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend"
@@ -38,12 +41,14 @@
     "@vueuse/core": "catalog:dev",
     "@vueuse/nuxt": "catalog:dev",
     "@vueuse/router": "catalog:dev",
+    "drizzle-kit": "catalog:server",
     "eslint": "catalog:dev",
     "eslint-plugin-format": "catalog:dev",
     "happy-dom": "catalog:dev",
     "lint-staged": "catalog:dev",
     "playwright-core": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
+    "tsx": "catalog:build",
     "unocss": "catalog:build",
     "vitest": "catalog:dev"
   },
