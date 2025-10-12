@@ -21,7 +21,10 @@ const nav = computed<ContentNavigationItem[]>(
     flattenAndExtractFiles(posts.value || []),
 )
 
-const randomCount = useState('randomCount', () => (Math.floor(Math.random() * 6) + 5))
+const randomCount = useState(
+  'randomCount',
+  () => (Math.floor(Math.random() * 6) + 5),
+)
 
 async function changeDir(newDir: keyof PageCollections) {
   category.value = newDir
@@ -50,7 +53,9 @@ function flattenAndExtractFiles(data: ContentNavigationItem[]) {
 </script>
 
 <template>
-  <div class="flex flex-row gap-4 justify-center">
+  <div
+    class="flex flex-row gap-4 justify-center"
+  >
     <div
       class="menu"
       :class="{ 'text-momo': category === 'huisi' }"

@@ -46,9 +46,7 @@ function toggleDark(event?: MouseEvent) {
 <template>
   <ClientOnly>
     <div
-      i-ri-sun-line dark:i-ri-moon-line text-2xl
-      no-underline cursor-pointer transition-all
-      ease-in hover:text-momo hover:opacity-90
+      i-ri-sun-line dark:i-ri-moon-line text-2xl no-underline cursor-pointer transition-all ease-in hover:text-momo hover:opacity-90
       @click="toggleDark"
     />
 

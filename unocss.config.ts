@@ -4,7 +4,6 @@ import {
   presetIcons,
   presetTagify,
   presetTypography,
-  // presetWebFonts,
   presetWind4,
   transformerDirectives,
 } from 'unocss'
@@ -14,8 +13,8 @@ export default defineConfig({
     presetAttributify(),
     presetWind4({
       dark: {
-        dark: '.dark-mode',
-        light: '.light-mode',
+        dark: '.dark',
+        light: '.light',
       },
     }),
     presetIcons(),
@@ -30,7 +29,8 @@ export default defineConfig({
   ],
   shortcuts: [{
     'bg-base': 'bg-white dark:bg-black',
-    'text-base': 'text-gray-700 dark:text-gray-200',
+    'border-base': 'border-[#8884]',
+    'color-base': 'text-black dark:text-white',
   }],
   theme: {
     colors: {
