@@ -1,0 +1,20 @@
+# Agent Guidelines for CornPark Nuxt
+- Build: `pnpm build`; Dev: `pnpm dev`; Type check: `nuxt typecheck`
+- Lint: `pnpm lint`; Fix: `pnpm lint:fix` (pre-commit runs lint-staged)
+- Test all: `pnpm test`; Coverage: `pnpm coverage`
+- Single file: `vitest run <path/to/test.spec.ts>`
+- Single test: `vitest run -t "name"` (filters by test name)
+- Framework: Nuxt 3 + Vue 3 `<script setup>` + TypeScript (strict)
+- Imports: Auto-import Vue/Nuxt APIs; do not import `ref`/`computed`/`defineComponent`
+- Modules: Use ESM; local aliases per Nuxt; avoid default exports for composables
+- Linting/Formatting: `@antfu/eslint-config` + perfectionist sorting; keep imports ordered
+- Styling: UnoCSS attributify (e.g., `text-sm flex items-center`)
+- Naming: camelCase vars/functions; PascalCase components/types; kebab-case routes
+- Types: Prefer explicit types; avoid `any`; narrow with generics/`as const`
+- Error handling: Wrap async in try/catch; throw `Error` with context; no silent catches
+- Comments: None; code should be self-documenting
+- Tests: Vitest globals + Nuxt env; `happy-dom`; colocate under `app/tests`
+- Scripts: `postinstall` runs `nuxt prepare`; use pnpm v10+
+- DB/Tools: Drizzle via scripts (`auth:generate`, `auth:push`) when needed
+- Cursor/Copilot: No `.cursor/rules` or Copilot instruction files detected
+- When in doubt: follow existing patterns in `app/` and `content/`
