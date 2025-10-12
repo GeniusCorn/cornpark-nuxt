@@ -21,9 +21,6 @@ const { data: page } = await useAsyncData(path.value as string, () => {
     @click="$router.go(-1)"
   >
     <div i-ri-arrow-left-fill />
-    <div>
-      Back
-    </div>
   </NuxtLink>
 
   <ContentRenderer

@@ -5,7 +5,7 @@
 <template>
   <Header />
 
-  <div class="m-auto prose">
+  <div class="dark:prose-invert m-auto prose">
     <slot />
   </div>
 
