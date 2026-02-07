@@ -12,7 +12,7 @@ export default defineConfig({
     '**/test/**',
   ],
   install: true,
-  packageMode: {
-  },
+  packageMode: 'latest',
+  recursive: true,
   write: true,
 })
