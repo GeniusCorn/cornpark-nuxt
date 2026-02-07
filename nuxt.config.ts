@@ -2,8 +2,9 @@ export default defineNuxtConfig({
   colorMode: {
     classPrefix: '',
     classSuffix: '',
-    fallback: 'light',
-    preference: 'light',
+    dataValue: 'theme',
+    fallback: 'system',
+    preference: 'system',
   },
 
   compatibilityDate: '2024-04-03',
@@ -23,6 +24,11 @@ export default defineNuxtConfig({
       pathMeta: {},
     },
   },
+
+  css: [
+    '~/assets/main.css',
+    '~/assets/view-transition.css',
+  ],
 
   dayjs: {
     defaultLocale: 'en',

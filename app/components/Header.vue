@@ -43,6 +43,6 @@
 
 <style scoped>
 a {
-  @apply text-2xl hover:text-momo transition-all no-underline;
+  @apply text-2xl text-black dark:text-white hover:text-momo transition-all no-underline;
 }
 </style>
