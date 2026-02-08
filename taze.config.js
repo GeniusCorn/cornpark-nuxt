@@ -12,7 +12,6 @@ export default defineConfig({
     '**/test/**',
   ],
   install: true,
-  packageMode: 'latest',
   recursive: true,
   write: true,
 })
