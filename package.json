@@ -2,7 +2,7 @@
   "name": "cornpark-nuxt",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.1",
   "scripts": {
     "build": "nuxt build",
     "coverage": "vitest --coverage",
@@ -14,7 +14,8 @@
     "preview": "nuxt preview",
     "test": "vitest",
     "auth:generate": "pnpm dlx @better-auth/cli generate --config ./shared/auth.ts --output ./server/db/schema.ts",
-    "auth:push": "pnpm exec drizzle-kit push --config ./server/db/drizzle.config.ts"
+    "auth:push": "pnpm exec drizzle-kit push --config ./server/db/drizzle.config.ts",
+    "test:browser": "vitest --config=vitest.browser.config.ts"
   },
   "dependencies": {
     "@libsql/client": "catalog:server",
@@ -35,6 +36,8 @@
     "@types/better-sqlite3": "catalog:types",
     "@unocss/eslint-plugin": "catalog:dev",
     "@unocss/nuxt": "catalog:dev",
+    "@vitejs/plugin-vue": "catalog:frontend",
+    "@vitest/browser-playwright": "catalog:dev",
     "@vitest/coverage-v8": "catalog:dev",
     "@vitest/ui": "catalog:dev",
     "@vue/test-utils": "catalog:dev",
@@ -46,11 +49,12 @@
     "eslint-plugin-format": "catalog:dev",
     "happy-dom": "catalog:dev",
     "lint-staged": "catalog:dev",
-    "playwright-core": "catalog:dev",
+    "playwright": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
     "tsx": "catalog:build",
     "unocss": "catalog:build",
-    "vitest": "catalog:dev"
+    "vitest": "catalog:dev",
+    "vitest-browser-vue": "catalog:frontend"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
