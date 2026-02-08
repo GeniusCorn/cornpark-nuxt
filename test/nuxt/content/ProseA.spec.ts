@@ -1,7 +1,8 @@
 import { ProseA } from '#components'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { describe, expect, it } from 'vitest'
 
-describe('proseA', () => {
+describe('ProseA', () => {
   it('should render', async () => {
     const component = await mountSuspended(ProseA)
 

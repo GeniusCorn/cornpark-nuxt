@@ -1,7 +1,8 @@
 import { Footer } from '#components'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
+import { describe, expect, it, vi } from 'vitest'
 
-describe('footer', () => {
+describe('Footer', () => {
   it('should render', async () => {
     const component = await mountSuspended(Footer)
 
@@ -9,7 +10,7 @@ describe('footer', () => {
     expect(component.find('footer').exists()).toBe(true)
   })
 
-  it('should display the current year', async () => {
+  it('should display current year', async () => {
     const component = await mountSuspended(Footer)
 
     const currentYear = new Date().getFullYear()
