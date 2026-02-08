@@ -55,6 +55,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
     'dayjs-nuxt',
+    '@nuxt/test-utils/module',
   ],
 
   routeRules: {

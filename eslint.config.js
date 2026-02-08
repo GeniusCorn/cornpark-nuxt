@@ -25,6 +25,7 @@ export default antfu({
     'perfectionist/sort-switch-case': 'error',
     'perfectionist/sort-union-types': 'error',
     'perfectionist/sort-variable-declarations': 'error',
+    'test/prefer-lowercase-title': 'off',
   },
   typescript: true,
   unocss: true,

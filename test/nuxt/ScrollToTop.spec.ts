@@ -3,6 +3,7 @@ import {
   mockNuxtImport,
   mountSuspended,
 } from '@nuxt/test-utils/runtime'
+import { describe, expect, it, vi } from 'vitest'
 
 const {
   scrollToMock,
@@ -24,7 +25,7 @@ mockNuxtImport('useWindowScroll', () => {
   return useWindowScrollMock
 })
 
-describe('scroll to top button', () => {
+describe('ScrollToTop', () => {
   it('should render', async () => {
     const component = await mountSuspended(ScrollToTop)
 
