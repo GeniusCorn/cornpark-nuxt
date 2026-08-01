@@ -1,8 +1,24 @@
-# Hi there, I am Corn Huang.
+# Welcome to Nuxt Content Starter
 
-I work at CAUPD. I am passionate about modern front-end development.
+This is the main page displaying Markdown located at [content/index.md](https://github.com/nuxt/starter/blob/content/content/index.md).
 
-I am proud to say that I have been with [EMNOTE]() since 2017, a pioneering company in emergency medicine education and research, where I now serve as Senior Vice President of Technology.
+Move to [about](/about) page.
 
-<img rounded-full src="/avatar.png" />
+## Manage your Contents
 
+Create new pages or modify the existing ones in `content/` directory.
+
+## Query & Render Pages
+
+You can find an example of querying contents and rendering them in a [catch-all page](https://github.com/nuxt/starter/blob/content/app/pages/%5B...slug%5D.vue)
+
+## Integrate Vue Component
+
+::alert{color="green"}
+The current [alert](https://github.com/nuxt/starter/blob/content/app/components/Alert.vue) and the [counter](https://github.com/nuxt/starter/blob/content/app/components/Counter.vue) below are `Vue` components integrated into the Markdown.
+::
+
+::counter
+::
+
+Checkout out the [documentation](https://content.nuxt.com/docs/getting-started) to learn more.

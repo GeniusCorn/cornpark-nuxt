@@ -1,15 +1,5 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <NuxtLoadingIndicator color="#f596aa" />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtRouteAnnouncer />
 
-  <ScrollToTop />
+  <NuxtPage />
 </template>
-
-<style>
-
-</style>
