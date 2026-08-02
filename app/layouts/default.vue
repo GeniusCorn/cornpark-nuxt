@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <h1
-    class="text-2xl"
-  >
+  <div>
+    <Nav />
+
     <slot />
-  </h1>
+  </div>
 </template>
