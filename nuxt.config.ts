@@ -1,5 +1,36 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    pageTransition: {
+      mode: 'out-in',
+      name: 'page',
+    },
+  },
+
+  colorMode: {
+    fallback: 'light',
+    preference: 'system',
+    storage: 'localStorage',
+    storageKey: 'color-mode',
+  },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            dark: 'vitesse-dark',
+            default: 'vitesse-light',
+          },
+        },
+      },
+    },
+  },
+
+  css: [
+    '~/styles/main.css',
+    '~/styles/toggle.css',
+  ],
+
   devtools: {
     enabled: true,
   },
@@ -7,6 +38,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@unocss/nuxt',
+    '@nuxtjs/color-mode',
   ],
 
   unocss: {

@@ -1,4 +1,4 @@
-## Hi there :waving-emoji, I'm Corn Huang.
+## Hi there :waving-emoji, I'm Corn Huang — you can call me **CH**.
 
 Front-end developer by passion, technology leader by trade.
 
