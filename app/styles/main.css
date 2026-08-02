@@ -2,7 +2,7 @@ html {
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: scroll;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 html.dark {
