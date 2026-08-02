@@ -12,6 +12,7 @@ export default antfu({
       singleline: 1,
     }],
     'vue/new-line-between-multi-line-property': 'error',
+    'vue/padding-line-between-tags': ['error'],
     'vue/sort-keys': 'error',
   },
   typescript: true,
