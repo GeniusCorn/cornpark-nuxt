@@ -24,7 +24,7 @@ function formatDate(date: string | Date) {
       :to="`${post.path}`"
     >
       <div
-        class="font-medium mt-2"
+        class="font-bold"
       >
         {{ post.title }}
       </div>
