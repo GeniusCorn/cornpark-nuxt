@@ -35,7 +35,18 @@ export default defineConfig({
     presetWebFonts({
       fonts: {
         mono: 'Geist Mono',
-        sans: 'Lato',
+        sans: [
+          {
+            italic: true,
+            name: 'Lato',
+            weights: ['400', '500'],
+          },
+          {
+            name: 'Noto Sans SC',
+            provider: 'fontsource',
+            weights: ['400', '500', '700'],
+          },
+        ],
       },
       provider: 'google',
     }),

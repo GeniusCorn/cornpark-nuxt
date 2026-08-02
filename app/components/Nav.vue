@@ -1,5 +1,61 @@
 <script lang="ts" setup>
+const colorMode = useColorMode()
 
+const isDark = computed(() => colorMode.value === 'dark')
+
+function toggleColorMode(event: MouseEvent) {
+  // @ts-expect-error experimental API
+  const isAppearanceTransition = document
+    .startViewTransition
+    && !window
+      .matchMedia('(prefers-reduced-motion: reduce)')
+      .matches
+
+  if (!isAppearanceTransition) {
+    colorMode.preference = colorMode.value
+      === 'dark'
+      ? 'light'
+      : 'dark'
+    return
+  }
+
+  const x = event.clientX
+  const y = event.clientY
+  const endRadius = Math.hypot(
+    Math.max(x, innerWidth - x),
+    Math.max(y, innerHeight - y),
+  )
+  const transition = document
+    .startViewTransition(async () => {
+      colorMode.preference = colorMode.value
+        === 'dark'
+        ? 'light'
+        : 'dark'
+      await nextTick()
+    })
+  transition.ready
+    .then(() => {
+      const clipPath = [
+        `circle(0px at ${x}px ${y}px)`,
+        `circle(${endRadius}px at ${x}px ${y}px)`,
+      ]
+      document.documentElement.animate(
+        {
+          clipPath: isDark.value
+            ? [...clipPath].reverse()
+            : clipPath,
+        },
+        {
+          duration: 400,
+          easing: 'ease-out',
+          fill: 'forwards',
+          pseudoElement: isDark.value
+            ? '::view-transition-old(root)'
+            : '::view-transition-new(root)',
+        },
+      )
+    })
+}
 </script>
 
 <template>
@@ -40,6 +96,20 @@
         href="https://bsky.app/profile/nicecorn.bsky.social"
         target="_blank"
       />
+
+      <ClientOnly>
+        <div
+          class="size-6 cursor-pointer"
+          :class="isDark ? 'i-ri-moon-line' : 'i-ri-sun-line'"
+          @click="toggleColorMode"
+        />
+
+        <template #fallback>
+          <div
+            class="i-ri-loader-2-line size-6 animate-spin"
+          />
+        </template>
+      </ClientOnly>
     </div>
   </div>
 </template>
