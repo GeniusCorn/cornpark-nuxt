@@ -10,13 +10,6 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  theme: {
-    colors: {
-      corn: '#ebe18b',
-      momo: '#f596aa',
-    },
-  },
-
   presets: [
     presetWind4({
       preflights: {
@@ -25,9 +18,27 @@ export default defineConfig({
     }),
     presetIcons(),
     presetAttributify(),
-    presetTypography(),
+    presetTypography({
+      cssExtend: {
+        'a': {
+          'text-decoration-line': 'none',
+          'transition': 'color 0.2s ease',
+        },
+        'a:hover': {
+          'color': '#f596aa',
+          'text-decoration-line': 'underline',
+        },
+      },
+    }),
     presetTagify(),
   ],
+
+  theme: {
+    colors: {
+      corn: '#ebe18b',
+      momo: '#f596aa',
+    },
+  },
 
   transformers: [
     transformerVariantGroup(),
