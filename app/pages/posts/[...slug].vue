@@ -17,6 +17,13 @@ if (!page.value) {
     statusMessage: 'Page not found',
   })
 }
+
+useSeoMeta({
+  description: () => page.value?.description,
+  ogDescription: () => page.value?.description,
+  ogTitle: () => `${page.value?.title} | CornPark`,
+  title: () => `${page.value?.title} | CornPark`,
+})
 </script>
 
 <template>

@@ -1,5 +1,15 @@
 export default defineNuxtConfig({
   app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { href: '/favicon.ico', rel: 'icon', type: 'image/x-icon' },
+      ],
+      title: 'CornPark',
+    },
+
     pageTransition: {
       mode: 'out-in',
       name: 'page',
