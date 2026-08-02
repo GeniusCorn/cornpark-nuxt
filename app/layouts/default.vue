@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <div>
+  <div
+    class="px-4"
+  >
     <Nav />
 
     <slot />

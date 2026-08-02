@@ -4,6 +4,7 @@ import {
   presetIcons,
   presetTagify,
   presetTypography,
+  presetWebFonts,
   presetWind4,
   transformerDirectives,
   transformerVariantGroup,
@@ -31,6 +32,13 @@ export default defineConfig({
       },
     }),
     presetTagify(),
+    presetWebFonts({
+      fonts: {
+        mono: 'Geist Mono',
+        sans: 'Lato',
+      },
+      provider: 'google',
+    }),
   ],
 
   theme: {

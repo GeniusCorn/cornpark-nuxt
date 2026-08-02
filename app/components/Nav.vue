@@ -7,10 +7,17 @@
     class="mx-auto py-4 flex flex-row gap-4 max-w-2xl items-center justify-between"
   >
     <NuxtLink
-      class="text-xl no-underline transition hover:text-momo"
+      class="text-xl no-underline flex flex-row gap-4 transition items-center hover:text-momo"
       href="/"
     >
-      CornPark
+      <img
+        class="rounded-full size-12"
+        src="/avatar.svg"
+      >
+
+      <div>
+        CornPark
+      </div>
     </NuxtLink>
 
     <div
