@@ -3,14 +3,6 @@ const allPosts = await queryCollection('posts')
   .limit(3)
   .order('date', 'DESC')
   .all()
-
-function formatDate(date: string | Date) {
-  return new Intl.DateTimeFormat('en-US', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  }).format(new Date(date))
-}
 </script>
 
 <template>
@@ -24,9 +16,18 @@ function formatDate(date: string | Date) {
       :to="`${post.path}`"
     >
       <div
-        class="font-bold"
+        class="flex flex-row gap-2 items-center"
       >
-        {{ post.title }}
+        <div
+          class="font-bold"
+        >
+          {{ post.title }}
+        </div>
+
+        <div
+          class="size-4"
+          :class="post.lang === 'zh' ? 'i-icon-park-outline-chinese' : 'i-icon-park-outline-english'"
+        />
       </div>
 
       <div

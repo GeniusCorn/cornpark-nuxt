@@ -2,6 +2,7 @@
 date: 2026-05-12
 title: 误删 WSL 事件
 description: 记录一次误删 WSL 的事件及其解决过程
+lang: zh
 ---
 
 ## 回放事故
