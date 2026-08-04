@@ -6,10 +6,10 @@
   <div
     class="px-4 space-y-6"
   >
-    <Nav />
+    <LayoutNav />
 
     <slot />
 
-    <Footer />
+    <LayoutFooter />
   </div>
 </template>

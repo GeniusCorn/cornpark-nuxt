@@ -8,10 +8,10 @@ I joined EMNOTE in 2017, a pioneer in emergency medicine education and research,
 
 Some of the software and technologies I use on a daily basis.
 
-::TecStack
+::HomeTecStack
 ::
 
 ## Latest Posts
 
-::LatestPosts
+::HomeLatestPosts
 ::
