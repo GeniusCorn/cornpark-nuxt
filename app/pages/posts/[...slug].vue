@@ -30,6 +30,17 @@ useSeoMeta({
   <div
     class="mx-auto max-w-2xl prose dark:prose-invert"
   >
+    <h1 class="text-3xl font-bold">
+      {{ page?.title }}
+    </h1>
+
+    <p
+      v-if="page?.date"
+      class="text-sm text-gray-500 mt-2 dark:text-gray-400"
+    >
+      {{ formatDate(page.date) }}
+    </p>
+
     <ContentRenderer
       v-if="page"
       :value="page"

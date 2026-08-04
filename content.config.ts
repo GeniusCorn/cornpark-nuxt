@@ -13,6 +13,8 @@ export default defineContentConfig({
     posts: defineCollection({
       schema: z.object({
         date: z.date(),
+        description: z.string().optional(),
+        title: z.string(),
       }),
       source: 'posts/**/*.md',
       type: 'page',

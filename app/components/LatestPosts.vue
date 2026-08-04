@@ -3,14 +3,6 @@ const allPosts = await queryCollection('posts')
   .limit(3)
   .order('date', 'DESC')
   .all()
-
-function formatDate(date: string | Date) {
-  return new Intl.DateTimeFormat('en-US', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  }).format(new Date(date))
-}
 </script>
 
 <template>
