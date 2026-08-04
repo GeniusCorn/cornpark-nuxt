@@ -26,7 +26,7 @@ const placementClass = computed(() => placementClasses[props.placement])
     <slot />
 
     <div
-      class="text-xs text-gray-700 font-medium px-3 py-1.5 border border-black/5 rounded-xl bg-white/95 opacity-0 pointer-events-none whitespace-nowrap shadow-lg transition-opacity duration-200 absolute z-10 dark:text-gray-200 dark:border-white/10 dark:bg-white/10 group-hover:opacity-100"
+      class="text-xs text-gray-700 font-medium px-3 py-1.5 border border-black/5 rounded-xl bg-white/95 opacity-0 pointer-events-none whitespace-nowrap shadow-lg transition-opacity duration-200 absolute z-10 dark:text-gray-200 dark:border-white/10 dark:bg-gray-800/95 group-hover:opacity-100"
       :class="placementClass"
     >
       {{ content }}
