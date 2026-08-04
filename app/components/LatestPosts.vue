@@ -16,9 +16,18 @@ const allPosts = await queryCollection('posts')
       :to="`${post.path}`"
     >
       <div
-        class="font-bold"
+        class="flex flex-row gap-2 items-center"
       >
-        {{ post.title }}
+        <div
+          class="font-bold"
+        >
+          {{ post.title }}
+        </div>
+
+        <div
+          class="size-4"
+          :class="post.lang === 'zh' ? 'i-icon-park-outline-chinese' : 'i-icon-park-outline-english'"
+        />
       </div>
 
       <div
