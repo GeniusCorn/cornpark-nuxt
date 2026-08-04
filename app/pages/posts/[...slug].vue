@@ -64,5 +64,7 @@ useSeoMeta({
       v-if="page"
       :value="page"
     />
+
+    <UiBackToTop />
   </div>
 </template>
