@@ -85,7 +85,7 @@ function toggleColorMode(event: MouseEvent) {
         Blog
       </NuxtLink>
 
-      <Tooltip
+      <UiTooltip
         content="GitHub"
         placement="bottom"
       >
@@ -94,9 +94,9 @@ function toggleColorMode(event: MouseEvent) {
           href="https://github.com/GeniusCorn"
           target="_blank"
         />
-      </Tooltip>
+      </UiTooltip>
 
-      <Tooltip
+      <UiTooltip
         content="Bluesky"
         placement="bottom"
       >
@@ -105,10 +105,10 @@ function toggleColorMode(event: MouseEvent) {
           href="https://bsky.app/profile/nicecorn.bsky.social"
           target="_blank"
         />
-      </Tooltip>
+      </UiTooltip>
 
       <ClientOnly>
-        <Tooltip
+        <UiTooltip
           :content="isDark ? 'Sun Sun' : 'Night Night'"
           placement="bottom"
         >
@@ -117,7 +117,7 @@ function toggleColorMode(event: MouseEvent) {
             :class="isDark ? 'i-ri-moon-line' : 'i-ri-sun-line'"
             @click="toggleColorMode"
           />
-        </Tooltip>
+        </UiTooltip>
 
         <template #fallback>
           <div

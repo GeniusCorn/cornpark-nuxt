@@ -42,14 +42,14 @@ useSeoMeta({
       <div
         class="flex flex-row gap-2 items-center"
       >
-        <Tooltip
+        <UiTooltip
           :content="page?.lang === 'zh' ? '中文' : 'English'"
           placement="bottom"
         >
           <div
             :class="page?.lang === 'zh' ? 'i-icon-park-outline-chinese' : 'i-icon-park-outline-english'"
           />
-        </Tooltip>
+        </UiTooltip>
 
         <div
           v-if="page?.date"
