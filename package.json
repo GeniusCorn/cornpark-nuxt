@@ -20,10 +20,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.2.0",
-    "@iconify/json": "^2.2.508",
+    "@iconify/json": "^2.2.509",
     "@unocss/eslint-plugin": "^66.7.5",
     "@unocss/nuxt": "^66.7.5",
-    "eslint": "^10.7.0",
+    "eslint": "^10.8.0",
     "unocss": "^66.7.5"
   }
 }
