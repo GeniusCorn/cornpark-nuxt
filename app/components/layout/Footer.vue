@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 
 <template>
   <div
-    class="text-xs text-gray-500/50 mb-6 flex flex-col gap-2 items-center"
+    class="font-noto text-xs text-gray-500/50 mb-6 flex flex-col gap-2 items-center"
   >
     <NuxtLink
       class="transition hover:(text-momo underline)"

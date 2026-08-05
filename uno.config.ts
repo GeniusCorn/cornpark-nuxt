@@ -34,17 +34,20 @@ export default defineConfig({
     presetTagify(),
     presetWebFonts({
       fonts: {
+        inter: {
+          name: 'Inter',
+          provider: 'fontsource',
+        },
         mono: 'Geist Mono',
+        noto: {
+          name: 'Noto Sans SC',
+          provider: 'fontsource',
+        },
         sans: [
           {
-            italic: true,
-            name: 'Lato',
-            weights: ['400', '500'],
-          },
-          {
-            name: 'Noto Sans SC',
+            name: 'LXGW WenKai',
             provider: 'fontsource',
-            weights: ['400', '500', '700'],
+            weights: ['500', '500', '700'],
           },
         ],
       },
