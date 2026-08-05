@@ -60,7 +60,7 @@ function toggleColorMode(event: MouseEvent) {
 
 <template>
   <div
-    class="mx-auto py-4 flex flex-row gap-4 max-w-2xl items-center justify-between"
+    class="font-inter mx-auto py-4 flex flex-row gap-4 max-w-2xl items-center justify-between"
   >
     <NuxtLink
       class="text-xl no-underline flex flex-row gap-4 transition items-center hover:text-momo"
