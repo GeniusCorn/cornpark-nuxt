@@ -32,6 +32,10 @@ export default defineNuxtConfig({
             default: 'vitesse-light',
           },
         },
+        toc: {
+          depth: 3,
+          searchDepth: 3,
+        },
       },
     },
   },
