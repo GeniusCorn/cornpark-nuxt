@@ -28,42 +28,59 @@ useSeoMeta({
 
 <template>
   <div
-    class="mx-auto max-w-2xl prose dark:prose-invert"
+    class="mx-auto max-w-2xl relative"
   >
-    <div
-      class="flex flex-row gap-2 items-center justify-between"
+    <aside
+      class="mr-8 w-56 hidden bottom-0 right-full top-0 absolute xl:block"
     >
       <div
-        class="text-3xl font-bold"
+        class="top-8 sticky"
       >
-        {{ page?.title }}
+        <UiTableOfContents
+          :links="page?.body.toc?.links"
+          title="Contents"
+        />
       </div>
+    </aside>
 
+    <div
+      class="prose dark:prose-invert"
+    >
       <div
-        class="flex flex-row gap-2 items-center"
+        class="flex flex-row gap-2 items-center justify-between"
       >
-        <UiTooltip
-          :content="page?.lang === 'zh' ? '中文' : 'English'"
-          placement="bottom"
+        <div
+          class="text-3xl font-bold"
         >
-          <div
-            :class="page?.lang === 'zh' ? 'i-icon-park-outline-chinese' : 'i-icon-park-outline-english'"
-          />
-        </UiTooltip>
+          {{ page?.title }}
+        </div>
 
         <div
-          v-if="page?.date"
-          class="text-sm text-gray-500 dark:text-gray-400"
+          class="flex flex-row gap-2 items-center"
         >
-          {{ formatDate(page.date) }}
+          <UiTooltip
+            :content="page?.lang === 'zh' ? '中文' : 'English'"
+            placement="bottom"
+          >
+            <div
+              :class="page?.lang === 'zh' ? 'i-icon-park-outline-chinese' : 'i-icon-park-outline-english'"
+            />
+          </UiTooltip>
+
+          <div
+            v-if="page?.date"
+            class="text-sm text-gray-500 dark:text-gray-400"
+          >
+            {{ formatDate(page.date) }}
+          </div>
         </div>
       </div>
-    </div>
 
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
+    </div>
 
     <UiBackToTop />
   </div>
