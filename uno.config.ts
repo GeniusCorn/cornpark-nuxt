@@ -39,15 +39,11 @@ export default defineConfig({
           provider: 'fontsource',
         },
         mono: 'Geist Mono',
-        noto: {
-          name: 'Noto Sans SC',
-          provider: 'fontsource',
-        },
         sans: [
           {
-            name: 'LXGW WenKai',
+            name: 'Noto Sans SC',
             provider: 'fontsource',
-            weights: ['500', '500', '700'],
+            weights: ['400', '600', '900'],
           },
         ],
       },
