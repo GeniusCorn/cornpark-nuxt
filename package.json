@@ -11,20 +11,20 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^3.15.2",
+    "@nuxt/content": "^3.16.0",
     "@nuxtjs/color-mode": "4.0.1",
     "@vueuse/nuxt": "14.4.0",
     "better-sqlite3": "^13.0.3",
     "nuxt": "^4.5.2",
-    "vue": "^3.5.41",
-    "vue-router": "^5.2.0"
+    "vue": "^3.5.42",
+    "vue-router": "^5.3.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
-    "@iconify/json": "^2.2.513",
-    "@unocss/eslint-plugin": "^66.7.5",
-    "@unocss/nuxt": "^66.7.5",
-    "eslint": "^10.8.1",
-    "unocss": "^66.7.5"
+    "@iconify/json": "^2.2.522",
+    "@unocss/eslint-plugin": "^66.8.1",
+    "@unocss/nuxt": "^66.8.1",
+    "eslint": "^10.9.1",
+    "unocss": "^66.8.1"
   }
 }
