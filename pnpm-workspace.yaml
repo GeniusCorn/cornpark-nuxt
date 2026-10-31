@@ -1,7 +1,6 @@
 minimumReleaseAge: 0
-shellEmulator: true
-
 trustPolicy: off
+shellEmulator: true
 
 allowBuilds:
   better-sqlite3: true
