@@ -12,7 +12,7 @@ const tools = [
   { href: 'https://www.mysql.com/', icon: 'i-vscode-icons-file-type-mysql', name: 'MySQL' },
   { href: 'https://www.netlify.com/', icon: 'i-vscode-icons-file-type-light-netlify', name: 'Netlify' },
   { href: 'https://code.visualstudio.com/', icon: 'i-vscode-icons-file-type-vscode', name: 'VS Code' },
-  { href: 'https://brave.com/', icon: 'i-selfhst-brave', name: 'Brave' },
+  { href: 'https://helium.computer/', icon: 'i-thesvg-color-helium-browser', name: 'Helium' },
   { href: 'https://obsidian.md/', icon: 'i-selfhst-obsidian', name: 'Obsidian' },
 
   // { href: 'https://bitwarden.com/', icon: 'i-selfhst-bitwarden', name: 'Bitwarden' },
