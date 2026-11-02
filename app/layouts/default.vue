@@ -11,5 +11,7 @@
     <slot />
 
     <LayoutFooter />
+
+    <UiLightbox />
   </div>
 </template>
