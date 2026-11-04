@@ -9,9 +9,9 @@ const config: KnipConfig = {
     'content.config.ts',
     'taze.config.js',
   ],
-  // @iconify/json: icon collections are read by unocss presetIcons at build time
+  // @iconify-json/*: icon collections are read by unocss presetIcons at build time
   // taze: run ad-hoc via `pnpm dlx taze`, not a dependency
-  ignoreDependencies: ['@iconify/json', 'taze'],
+  ignoreDependencies: ['@iconify-json/*', 'taze'],
 }
 
 export default config
