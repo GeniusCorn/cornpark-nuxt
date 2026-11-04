@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.16.2",
-    "@nuxtjs/color-mode": "4.0.1",
-    "@vueuse/nuxt": "14.4.0",
+    "@nuxtjs/color-mode": "^4.1.0",
+    "@vueuse/nuxt": "^15.0.0",
     "better-sqlite3": "^13.0.3",
     "nuxt": "^4.6.4",
     "vue": "^3.5.44",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",
-    "@iconify/json": "^2.2.552",
+    "@iconify/json": "^2.2.553",
     "@nuxt/test-utils": "^4.3.4",
     "@unocss/eslint-plugin": "^66.12.0",
     "@unocss/nuxt": "^66.12.0",
