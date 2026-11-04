@@ -1,5 +1,6 @@
 minimumReleaseAge: 0
 trustPolicy: off
+shamefullyHoist: true
 shellEmulator: true
 
 allowBuilds:
