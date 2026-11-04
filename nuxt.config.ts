@@ -45,6 +45,10 @@ export default defineNuxtConfig({
     '~/styles/toggle.css',
   ],
 
+  devServer: {
+    host: 'localhost',
+  },
+
   devtools: {
     enabled: true,
   },
