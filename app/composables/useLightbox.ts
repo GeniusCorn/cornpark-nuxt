@@ -1,4 +1,4 @@
-export interface LightboxState {
+interface LightboxState {
   open: boolean
   src: string
   alt: string

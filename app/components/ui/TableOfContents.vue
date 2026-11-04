@@ -1,5 +1,5 @@
 <script setup lang="ts">
-export interface TocLink {
+interface TocLink {
   id: string
   text: string
   depth: number
