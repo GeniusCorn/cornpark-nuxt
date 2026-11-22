@@ -29,10 +29,11 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- the nav's own toggle, untouched: the engine only drives the effect -->
-  <div
+  <button
     ref="buttonRef"
     class="size-6 cursor-pointer"
     :class="theme === 'dark' ? 'i-ri-moon-line' : 'i-ri-sun-line'"
+    type="button"
   />
 
   <!-- the scene: the whole viewport, behind the page, so only the background rains -->
