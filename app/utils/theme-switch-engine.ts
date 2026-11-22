@@ -37,12 +37,6 @@ interface Options {
   onCommit: (theme: ThemeName) => void
 }
 
-/* the page's own backgrounds — see app/styles/main.css */
-const THEMES: Record<ThemeName, { bg: string }> = {
-  dark: { bg: '#050505' },
-  light: { bg: '#ffffff' },
-}
-
 const EASE_OUT = 'cubic-bezier(0.23, 1, 0.32, 1)'
 /* the longest real run is ~2.4s (a full viewport in rain) */
 const WATCHDOG_MS = 5000
@@ -64,6 +58,16 @@ const easeOutCubic = (p: number) => 1 - (1 - p) ** 3
 function transparentOf(hex: string) {
   const n = Number.parseInt(hex.slice(1), 16)
   return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, 0)`
+}
+
+/* the page's own backgrounds, read from CSS so the two can never drift apart */
+function bgOf(root: HTMLElement, theme: ThemeName) {
+  const hex = getComputedStyle(root).getPropertyValue(`--pts-bg-${theme}`).trim()
+  if (hex.length !== 4)
+    return hex
+  /* transparentOf reads a 6-digit hex */
+  const [, r, g, b] = hex
+  return `#${r}${r}${g}${g}${b}${b}`
 }
 
 /* a damped harmonic oscillator sampled into a CSS linear() easing */
@@ -416,7 +420,7 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
   }
 
   function effectRain(next: ThemeName, id: number) {
-    const color = THEMES[next].bg
+    const color = bgOf(root, next)
     /* puddles of the next theme under the controls; the rain over them */
     const wet = makeCanvas('pts__layer')
     const sky = makeCanvas('pts__layer', true)

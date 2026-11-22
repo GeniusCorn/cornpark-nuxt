@@ -1,12 +1,16 @@
 html {
-  background-color: #fff;
+  /* the rain paints these two colours: the theme switch reads them, so the
+     puddles always match the page they cover */
+  --pts-bg-light: #ffffff;
+  --pts-bg-dark: #050505;
+  background-color: var(--pts-bg-light);
   overflow-x: hidden;
   overflow-y: scroll;
   color-scheme: light;
 }
 
 html.dark {
-  background-color: #050505;
+  background-color: var(--pts-bg-dark);
   color-scheme: dark;
 }
 
