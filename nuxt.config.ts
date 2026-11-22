@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   css: [
     '~/styles/main.css',
-    '~/styles/toggle.css',
+    '~/styles/theme-switch.css',
   ],
 
   devServer: {

@@ -1,0 +1,40 @@
+/*
+ * Theme switch — Pin UI's theme switch, rain effect.
+ * Adapted from https://github.com/shadcn-labs/Pin-UI (MIT).
+ *
+ * The scene sits behind the page (z-index: -1), so the rain paints the
+ * background only: the content on top of it is never covered.
+ */
+
+/* the scene: the whole viewport, behind the content */
+.pts {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  isolation: isolate;
+  pointer-events: none;
+}
+
+/* under the rain: the puddles of the next theme */
+.pts__layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* over the puddles: the rain itself */
+.pts__fx {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pts__fx .pts__layer {
+  z-index: auto;
+}

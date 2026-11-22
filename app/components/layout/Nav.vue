@@ -1,60 +1,13 @@
 <script lang="ts" setup>
+import type { ThemeName } from '~/utils/theme-switch-engine'
+
 const colorMode = useColorMode()
 
 const isDark = computed(() => colorMode.value === 'dark')
+const theme = computed<ThemeName>(() => (isDark.value ? 'dark' : 'light'))
 
-function toggleColorMode(event: MouseEvent) {
-  // @ts-expect-error experimental API
-  const isAppearanceTransition = document
-    .startViewTransition
-    && !window
-      .matchMedia('(prefers-reduced-motion: reduce)')
-      .matches
-
-  if (!isAppearanceTransition) {
-    colorMode.preference = colorMode.value
-      === 'dark'
-      ? 'light'
-      : 'dark'
-    return
-  }
-
-  const x = event.clientX
-  const y = event.clientY
-  const endRadius = Math.hypot(
-    Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y),
-  )
-  const transition = document
-    .startViewTransition(async () => {
-      colorMode.preference = colorMode.value
-        === 'dark'
-        ? 'light'
-        : 'dark'
-      await nextTick()
-    })
-  transition.ready
-    .then(() => {
-      const clipPath = [
-        `circle(0px at ${x}px ${y}px)`,
-        `circle(${endRadius}px at ${x}px ${y}px)`,
-      ]
-      document.documentElement.animate(
-        {
-          clipPath: isDark.value
-            ? [...clipPath].reverse()
-            : clipPath,
-        },
-        {
-          duration: 400,
-          easing: 'ease-out',
-          fill: 'forwards',
-          pseudoElement: isDark.value
-            ? '::view-transition-old(root)'
-            : '::view-transition-new(root)',
-        },
-      )
-    })
+function changeTheme(next: ThemeName) {
+  colorMode.preference = next
 }
 </script>
 
@@ -112,10 +65,9 @@ function toggleColorMode(event: MouseEvent) {
           :content="isDark ? 'Sun Sun' : 'Night Night'"
           placement="bottom"
         >
-          <div
-            class="size-6 cursor-pointer"
-            :class="isDark ? 'i-ri-moon-line' : 'i-ri-sun-line'"
-            @click="toggleColorMode"
+          <UiThemeSwitch
+            :theme="theme"
+            @change="changeTheme"
           />
         </UiTooltip>
 
