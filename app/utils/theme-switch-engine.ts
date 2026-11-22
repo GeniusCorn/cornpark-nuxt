@@ -14,12 +14,10 @@
  *   dry gap left.
  *
  * Everything happens inside the scene's own box — here the whole viewport.
- * The next theme is painted under the controls, and each control (the toggle,
- * and anything marked data-pts-target) takes the new theme the moment the
- * flood reaches its centre — so it changes "when the rain hits it". When the
- * scene is covered, the scene itself commits. Reduced motion switches at
- * once; a watchdog finishes any run that stalls (a tab put in the background),
- * so a switch can never hang half done.
+ * The next theme is painted under the controls. When the scene is covered, the
+ * scene itself commits. Reduced motion switches at once; a watchdog finishes
+ * any run that stalls (a tab put in the background), so a switch can never
+ * hang half done.
  */
 
 export type ThemeName = 'light' | 'dark'
@@ -89,7 +87,6 @@ const SPRING_MS = 520
 
 interface Lobe { dx: number, dy: number, s: number }
 interface Spot { x: number, y: number, born: number, r0: number, rmax: number, lobes: Lobe[], tau?: number, creep?: number }
-interface Target { el: HTMLElement, x: number, y: number, done: boolean }
 
 const RAIN = {
   ambientRatio: 1.4, // far drops per wetting drop
@@ -264,23 +261,6 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
     return { canvas, ctx, h, w }
   }
 
-  /* the controls that take the next theme when the flood reaches them */
-  function floodTargets(): Target[] {
-    const els = [
-      button,
-      ...root.querySelectorAll<HTMLElement>('[data-pts-target]'),
-    ]
-    return els.map(el => ({
-      el,
-      ...centreOf(el),
-      done: false,
-    }))
-  }
-
-  function releaseTargets(targets: Target[]) {
-    for (const tg of targets) tg.el.removeAttribute('data-theme')
-  }
-
   /* ─ rain ─ */
 
   interface Drop {
@@ -416,7 +396,7 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
   }
 
   /* paint the spots (body and lobes) of the next theme, and flip any control a spot reaches */
-  function paintSpots(c: CanvasRenderingContext2D, w: number, h: number, spots: Spot[], t: number, k: number, color: string, targets: Target[], next: ThemeName) {
+  function paintSpots(c: CanvasRenderingContext2D, w: number, h: number, spots: Spot[], t: number, k: number, color: string) {
     c.clearRect(0, 0, w, h)
     c.fillStyle = color
     c.beginPath()
@@ -431,12 +411,6 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
         c.moveTo(lx + lr, ly)
         c.arc(lx, ly, lr, 0, Math.PI * 2)
       }
-      for (const tg of targets) {
-        if (!tg.done && Math.hypot(tg.x - p.x, tg.y - p.y) < r) {
-          tg.done = true
-          tg.el.dataset.theme = next
-        }
-      }
     }
     c.fill('nonzero')
   }
@@ -449,7 +423,6 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
     const { ctx, h, w } = sky
     const wctx = wet.ctx
     const plan = planRain(w, h)
-    const targets = floodTargets()
     const puddles: Spot[] = []
     const splashes: { x: number, y: number, vx: number, vy: number, r: number, born: number, life: number }[] = []
     const rings: { x: number, y: number, born: number, rmax: number, z: number }[] = []
@@ -461,7 +434,6 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
     let revealed = false
     let revealedAt = 0
     const t0 = performance.now()
-    cleanups.push(() => releaseTargets(targets))
 
     return new Promise<void>((resolve) => {
       const land = (d: Drop) => {
@@ -570,11 +542,10 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
             commit(next)
             wet.canvas.remove()
             layers.delete(wet.canvas)
-            releaseTargets(targets)
           }
         }
         if (!revealed)
-          paintSpots(wctx, w, h, puddles, t, k, color, targets, next)
+          paintSpots(wctx, w, h, puddles, t, k, color)
         ctx.clearRect(0, 0, w, h)
         drawSky(t)
         if (revealed && t - revealedAt > RAIN.tailMs) {
@@ -602,8 +573,6 @@ export function createThemeSwitch({ button, fx, onCommit, root }: Options): Them
     layers.clear()
     root.classList.remove('is-switching')
     button.getAnimations().forEach(a => a.cancel())
-    /* the toggle keeps the scene's theme: it lives outside the scene here */
-    button.dataset.theme = root.dataset.theme
     button.removeAttribute('aria-busy')
   }
 
