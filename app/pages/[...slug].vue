@@ -19,7 +19,7 @@ if (!page.value) {
 
 <template>
   <div
-    class="mx-auto max-w-2xl prose dark:prose-invert"
+    class="mx-auto max-w-2xl prose [&_a]:no-underline dark:prose-invert"
   >
     <ContentRenderer
       v-if="page"

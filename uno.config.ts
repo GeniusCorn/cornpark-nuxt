@@ -22,8 +22,7 @@ export default defineConfig({
     presetTypography({
       cssExtend: {
         'a': {
-          'text-decoration-line': 'none',
-          'transition': 'color 0.2s ease',
+          transition: 'color 0.2s ease',
         },
         'a:hover': {
           color: '#f596aa',
