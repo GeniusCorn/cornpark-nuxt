@@ -6,8 +6,9 @@ const allPosts = await queryCollection('posts')
 
 <template>
   <div
-    class="mx-auto max-w-2xl"
+    class="mx-auto max-w-2xl prose dark:prose-invert"
   >
+    <!-- prose gives the cards the same link hover style as the home page -->
     <HomePostList :posts="allPosts" />
   </div>
 </template>
