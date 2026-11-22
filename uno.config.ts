@@ -26,8 +26,7 @@ export default defineConfig({
           'transition': 'color 0.2s ease',
         },
         'a:hover': {
-          'color': '#f596aa',
-          'text-decoration-line': 'underline',
+          color: '#f596aa',
         },
       },
     }),
