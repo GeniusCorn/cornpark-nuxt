@@ -14,6 +14,12 @@ html.dark {
   color-scheme: dark;
 }
 
+/* the typography preset paints `pre` gray-800 even in light mode, which clashes
+   with the light shiki theme — keep the block light with the page */
+html:not(.dark) .prose pre {
+  background-color: #f6f8fa;
+}
+
 ::selection {
   background: #f596aa66;
 }
