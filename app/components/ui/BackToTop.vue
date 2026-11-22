@@ -1,13 +1,4 @@
 <script setup lang="ts">
-const props = withDefaults(
-  defineProps<{
-    columnWidth?: string
-  }>(),
-  {
-    columnWidth: '42rem',
-  },
-)
-
 const SCROLL_THRESHOLD = 300
 
 const { y } = useWindowScroll()
@@ -26,7 +17,7 @@ function backToTop() {
 }
 
 const backToTopStyle = computed(() => ({
-  right: `max(1.25rem, calc(50vw - ${props.columnWidth} / 2 - 3.5rem))`,
+  right: 'max(1.25rem, calc(50vw - 42rem / 2 - 3.5rem))',
 }))
 </script>
 
