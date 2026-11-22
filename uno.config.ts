@@ -32,18 +32,15 @@ export default defineConfig({
     presetTagify(),
     presetWebFonts({
       fonts: {
-        inter: {
-          name: 'Inter',
-          provider: 'fontsource',
-        },
-        mono: 'Geist Mono',
+        geist: 'Geist Mono',
+        inter: 'Inter',
         sans: [
           {
             name: 'Noto Sans SC',
-            provider: 'fontsource',
             weights: ['400', '600', '900'],
           },
         ],
+        wenkai: 'LXGW WenKai Mono TC',
       },
       provider: 'google',
     }),
@@ -53,6 +50,11 @@ export default defineConfig({
     colors: {
       corn: '#ebe18b',
       momo: '#f596aa',
+    },
+    // Geist Mono has no CJK glyphs, so Chinese used to fall through to the
+    // system mono font — give it a real mono CJK face, then the body font
+    font: {
+      mono: '"Geist Mono", "LXGW WenKai Mono TC", "Noto Sans SC", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     },
   },
 
