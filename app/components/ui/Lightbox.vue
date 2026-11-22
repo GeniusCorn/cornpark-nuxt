@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { close, state } = useLightbox()
 
+const closeButton = ref<HTMLButtonElement>()
+
 function onKeydown(event: KeyboardEvent) {
   if (event.key === 'Escape' && state.open) {
     close()
@@ -20,12 +22,18 @@ onBeforeUnmount(() => {
 // Lock background scroll while open.
 // `html` is the real scrolling container (html { overflow-y: scroll } in main.css),
 // so both `html` and `body` must be locked to actually prevent page scrolling.
+// The watcher runs after the DOM update so the Close button exists to focus:
+// the dialog is teleported to the end of the body, so without this, Tab walks
+// the page behind it and the Close button is out of reach.
 watch(
   () => state.open,
   (open) => {
     document.documentElement.style.overflow = open ? 'hidden' : ''
     document.body.style.overflow = open ? 'hidden' : ''
+    if (open)
+      closeButton.value?.focus()
   },
+  { flush: 'post' },
 )
 </script>
 
@@ -41,6 +49,7 @@ watch(
         @click.self="close"
       >
         <button
+          ref="closeButton"
           aria-label="Close preview"
           class="text-white/90 rounded-full bg-white/10 flex size-10 cursor-pointer transition-colors duration-200 items-center right-4 top-4 justify-center absolute z-10 hover:text-momo"
           type="button"
