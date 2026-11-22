@@ -7,9 +7,11 @@ const config: KnipConfig = {
     'app/components/home/*.vue',
     // configs loaded by their CLI, not imported anywhere
     'content.config.ts',
+    'taze.config.js',
   ],
   // @iconify-json/*: icon collections are read by unocss presetIcons at build time
-  ignoreDependencies: ['@iconify-json/*'],
+  // taze: run ad-hoc via `pnpm dlx taze`, not a dependency
+  ignoreDependencies: ['@iconify-json/*', 'taze'],
 }
 
 export default config
