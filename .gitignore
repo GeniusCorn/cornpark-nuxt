@@ -18,8 +18,10 @@ logs
 
 # Agent skills (local tooling)
 .agents/
-docs/agents/
 skills-lock.json
+
+# Issue tracker working files (see docs/agents/issue-tracker.md)
+.scratch/
 
 # Misc
 .DS_Store
